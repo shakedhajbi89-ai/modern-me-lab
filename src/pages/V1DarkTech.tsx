@@ -9,24 +9,20 @@ import CTA from "@/components/site/CTA";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
-const Index = () => {
+import { Link } from "react-router-dom";
+
+const V1DarkTech = () => {
   useEffect(() => {
     document.documentElement.dir = "rtl";
     document.documentElement.lang = "he";
-    document.title = "Shaked M. Hajbi — AI Engineer · Building tools that ship";
-    const meta = document.querySelector('meta[name="description"]');
-    const desc = "מתכנן ובונה כלים דיגיטליים, אוטומציות ומוצרי AI מותאמים אישית. גישה ברורה, תוצאה מדויקת.";
-    if (meta) meta.setAttribute("content", desc);
-    else {
-      const m = document.createElement("meta");
-      m.name = "description";
-      m.content = desc;
-      document.head.appendChild(m);
-    }
+    document.title = "Dark Tech — Shaked M. Hajbi";
   }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Link to="/" className="fixed top-5 left-5 z-[60] mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors bg-card/60 backdrop-blur border border-border rounded-full px-3 py-1.5">
+        ← גרסאות
+      </Link>
       <Nav />
       <main>
         <Hero />
@@ -42,4 +38,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default V1DarkTech;
