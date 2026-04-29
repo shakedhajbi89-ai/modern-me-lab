@@ -44,7 +44,6 @@ const V1DarkTech = () => {
       </main>
       <Footer />
       <StickyCTA />
-      <section id="faq" className="hidden" />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="relative py-32">
+    <section id="faq" className="relative py-32">
       <div className="container-narrow max-w-3xl">
         <div className="text-center mb-16">
           <div className="mono text-xs text-primary mb-4">// 06 — FAQ</div>
