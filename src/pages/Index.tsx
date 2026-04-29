@@ -1,16 +1,45 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Nav from "@/components/site/Nav";
+import Hero from "@/components/site/Hero";
+import About from "@/components/site/About";
+import Method from "@/components/site/Method";
+import Values from "@/components/site/Values";
+import Work from "@/components/site/Work";
+import CTA from "@/components/site/CTA";
+import Contact from "@/components/site/Contact";
+import Footer from "@/components/site/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.documentElement.dir = "rtl";
+    document.documentElement.lang = "he";
+    document.title = "Shaked M. Hajbi — AI Engineer · Building tools that ship";
+    const meta = document.querySelector('meta[name="description"]');
+    const desc = "מתכנן ובונה כלים דיגיטליים, אוטומציות ומוצרי AI מותאמים אישית. גישה ברורה, תוצאה מדויקת.";
+    if (meta) meta.setAttribute("content", desc);
+    else {
+      const m = document.createElement("meta");
+      m.name = "description";
+      m.content = desc;
+      document.head.appendChild(m);
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Method />
+        <Values />
+        <Work />
+        <CTA />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
