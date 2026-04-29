@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { id: "about", label: "עליי" },
-  { id: "method", label: "מתודולוגיה" },
-  { id: "outcomes", label: "תוצאות" },
-  { id: "values", label: "ערכים" },
+  { id: "services", label: "יכולות" },
+  { id: "method", label: "תהליך" },
   { id: "work", label: "עבודות" },
+  { id: "faq", label: "שאלות" },
   { id: "contact", label: "צור קשר" },
 ];
 

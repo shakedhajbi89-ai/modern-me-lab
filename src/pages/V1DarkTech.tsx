@@ -2,12 +2,17 @@ import { useEffect } from "react";
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
 import About from "@/components/site/About";
+import Capabilities from "@/components/site/Capabilities";
+import TechStack from "@/components/site/TechStack";
 import Method from "@/components/site/Method";
-import Values from "@/components/site/Values";
 import Work from "@/components/site/Work";
+import Testimonials from "@/components/site/Testimonials";
+import Values from "@/components/site/Values";
+import FAQ from "@/components/site/FAQ";
 import CTA from "@/components/site/CTA";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
+import StickyCTA from "@/components/site/StickyCTA";
 
 import { Link } from "react-router-dom";
 
@@ -15,7 +20,7 @@ const V1DarkTech = () => {
   useEffect(() => {
     document.documentElement.dir = "rtl";
     document.documentElement.lang = "he";
-    document.title = "Dark Tech — Shaked M. Hajbi";
+    document.title = "Shaked M. Hajbi — AI Engineer & Builder";
   }, []);
 
   return (
@@ -26,14 +31,20 @@ const V1DarkTech = () => {
       <Nav />
       <main>
         <Hero />
+        <TechStack />
         <About />
+        <Capabilities />
         <Method />
-        <Values />
         <Work />
+        <Testimonials />
+        <Values />
+        <FAQ />
         <CTA />
         <Contact />
       </main>
       <Footer />
+      <StickyCTA />
+      <section id="faq" className="hidden" />
     </div>
   );
 };

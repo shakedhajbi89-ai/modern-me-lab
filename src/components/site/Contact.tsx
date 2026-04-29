@@ -63,11 +63,15 @@ export default function Contact() {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-0.5">→</span>
-                  <span><strong className="text-foreground">AI Engineer · Python Developer</strong> מבסיס. בונה אוטומציות וכלים מותאמים.</span>
+                  <span><strong className="text-foreground">AI Engineer · Full-Stack Developer</strong> מבסיס. בונה אוטומציות, סוכנים וכלים מותאמים.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary mt-0.5">→</span>
-                  <span>אאסוף לתסיים סטטוס, אאיצים גילוי מהיים — אאחר לסט סטרים.</span>
+                  <span><strong className="text-foreground">תגובה תוך 24 שעות.</strong> שיחת היכרות חינם · אפיון ראשוני ללא התחייבות.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary mt-0.5">→</span>
+                  <span>עובד מ<strong className="text-foreground">חיפה</strong> · משלוח בכל העולם · GMT+3</span>
                 </li>
               </ul>
             </div>
