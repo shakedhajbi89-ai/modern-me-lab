@@ -479,5 +479,52 @@
   0%, 100% { opacity: 0.6; box-shadow: 0 0 0 0 hsl(42 70% 60% / 0.4); }
   50% { opacity: 1; box-shadow: 0 0 0 8px hsl(42 70% 60% / 0); }
 }
-.animate-amber-pulse { animation: amber-pulse 2.4s ease-in-out infinite; }
+  .animate-amber-pulse { animation: amber-pulse 2.4s ease-in-out infinite; }
+
+/* ============================================
+   ACCESSIBILITY OVERRIDES (toggled via FloatingDock)
+============================================ */
+html.a11y-reduce-motion *,
+html.a11y-reduce-motion *::before,
+html.a11y-reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+html.a11y-underline a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+html.a11y-contrast.theme-living {
+  --background: 36 40% 98%;
+  --foreground: 220 30% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 30% 4%;
+  --muted-foreground: 220 20% 22%;
+  --primary: 162 40% 28%;
+  --primary-foreground: 0 0% 100%;
+  --border: 220 30% 20%;
+}
+html.a11y-contrast {
+  --muted-foreground: 0 0% 15%;
+}
+html.a11y-contrast a,
+html.a11y-contrast button {
+  outline-offset: 2px;
+}
+
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M4 2 L4 30 L12 22 L17 34 L22 32 L17 20 L28 20 Z' fill='black' stroke='white' stroke-width='2'/></svg>") 4 2, auto !important;
+}
+
+/* Stronger focus visibility globally */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
