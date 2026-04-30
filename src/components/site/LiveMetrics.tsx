@@ -83,33 +83,35 @@ export default function LiveMetrics({
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" stagger={0.07}>
           {items.map((it) => {
             const Icon = it.icon;
             return (
-              <div key={it.label} className={card}>
-                <div className="flex items-start justify-between mb-3">
-                  <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Icon className="h-4 w-4 text-primary" />
+              <RevealItem key={it.label}>
+                <div className={`${card} h-full`}>
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <Icon className="h-4 w-4 text-primary" />
+                    </div>
+                    <div className="flex items-center gap-1.5 mono text-[10px] text-muted-foreground">
+                      {it.pulse && <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />}
+                      {it.delta}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1.5 mono text-[10px] text-muted-foreground">
-                    {it.pulse && <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />}
-                    {it.delta}
+                  <div className="font-display font-bold text-3xl tabular-nums tracking-tight">
+                    {it.value}
                   </div>
+                  <div className="mt-1 text-xs text-muted-foreground">{it.label}</div>
+                  {it.spark && (
+                    <div className="mt-3 text-primary">
+                      <Sparkline color="currentColor" />
+                    </div>
+                  )}
                 </div>
-                <div className="font-display font-bold text-3xl tabular-nums tracking-tight">
-                  {it.value}
-                </div>
-                <div className="mt-1 text-xs text-muted-foreground">{it.label}</div>
-                {it.spark && (
-                  <div className="mt-3 text-primary">
-                    <Sparkline color="currentColor" />
-                  </div>
-                )}
-              </div>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );
