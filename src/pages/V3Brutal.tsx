@@ -82,12 +82,15 @@ export default function Brutal() {
 
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
-        <div className="absolute top-20 -left-12 w-48 h-48 bg-[hsl(var(--brutal-pink))] brutal-border rotate-12 hidden lg:block" />
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-[hsl(var(--brutal-blue))] brutal-border -rotate-6 hidden lg:block" />
-        <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-[hsl(var(--brutal-lime))] brutal-border rotate-45 hidden lg:block" />
+        {/* animated bg shapes */}
+        <div className="absolute top-20 -left-12 w-48 h-48 bg-[hsl(var(--brutal-pink))] brutal-border rotate-12 hidden lg:block animate-bounce-soft" style={{ animationDelay: "0s" }} />
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-[hsl(var(--brutal-blue))] brutal-border -rotate-6 hidden lg:block animate-bounce-soft" style={{ animationDelay: "1.2s" }} />
+        <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-[hsl(var(--brutal-lime))] brutal-border rotate-45 hidden lg:block animate-spin-slow" />
+        <div className="absolute top-40 right-1/4 w-16 h-16 brutal-border hidden lg:block animate-color-cycle" />
+        <div className="absolute bottom-40 left-1/4 w-24 h-24 rounded-full bg-[hsl(var(--brutal-yellow))] brutal-border hidden lg:block animate-bounce-soft" style={{ animationDelay: "0.6s" }} />
 
         <div className="mx-auto max-w-7xl px-6 relative">
-          <div className="inline-flex items-center gap-2 brutal-border bg-[hsl(var(--brutal-yellow))] px-4 py-2 mb-8 font-bold text-sm uppercase">
+          <div className="inline-flex items-center gap-2 brutal-border bg-[hsl(var(--brutal-yellow))] px-4 py-2 mb-8 font-bold text-sm uppercase animate-slide-up-fade">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-foreground" />
@@ -95,48 +98,59 @@ export default function Brutal() {
             זמין · 2 משבצות פנויות ל-Q2 2026
           </div>
           <h1 className="font-display text-[14vw] sm:text-[10vw] lg:text-[9rem] leading-[0.85] uppercase">
-            <span className="block">קודם</span>
-            <span className="inline-block bg-[hsl(var(--brutal-lime))] px-4 brutal-border -rotate-1 my-2">מדברים.</span>
-            <span className="block mt-4">אחר־כך</span>
-            <span className="inline-block bg-[hsl(var(--brutal-pink))] px-4 brutal-border rotate-1 my-2">בונים.</span>
+            <span className="block animate-slide-up-fade" style={{ animationDelay: "0.05s" }}>קודם</span>
+            <span className="inline-block bg-[hsl(var(--brutal-lime))] px-4 brutal-border -rotate-1 my-2 animate-wiggle">מדברים.</span>
+            <span className="block mt-4 animate-slide-up-fade" style={{ animationDelay: "0.2s" }}>אחר־כך</span>
+            <span className="inline-block bg-[hsl(var(--brutal-pink))] px-4 brutal-border rotate-1 my-2 animate-wiggle" style={{ animationDelay: "0.5s" }}>בונים.</span>
           </h1>
 
           <div className="mt-16 grid lg:grid-cols-12 gap-8">
-            <p className="lg:col-span-7 text-xl lg:text-2xl font-bold leading-snug">
+            <p className="lg:col-span-7 text-xl lg:text-2xl font-bold leading-snug animate-slide-up-fade" style={{ animationDelay: "0.35s" }}>
               מתכנן ובונה כלים דיגיטליים, אוטומציות ומוצרי AI מותאמים אישית.
               כאלה שמשנים התנהלות, מאיצים יומיום, ומייצרים תוצאה של ממש —
               <span className="bg-[hsl(var(--brutal-yellow))] px-2"> לא רק מצגות.</span>
             </p>
-            <div className="lg:col-span-4 lg:col-start-9 flex flex-col gap-4">
-              <a href="#contact" className="brutal-border brutal-shadow bg-foreground text-background px-6 py-5 font-display text-2xl uppercase flex items-center justify-between">
-                בוא נדבר <ArrowLeft className="h-6 w-6" />
+            <div className="lg:col-span-4 lg:col-start-9 flex flex-col gap-4 animate-slide-up-fade" style={{ animationDelay: "0.5s" }}>
+              <a href="#contact" className="brutal-border brutal-shadow bg-foreground text-background px-6 py-5 font-display text-2xl uppercase flex items-center justify-between group">
+                <span>בוא נדבר</span>
+                <ArrowLeft className="h-6 w-6 transition-transform group-hover:-translate-x-2" />
               </a>
-              <a href="https://wa.me/972500000000" target="_blank" rel="noreferrer" className="brutal-border brutal-shadow bg-[hsl(var(--brutal-lime))] px-6 py-5 font-display text-2xl uppercase flex items-center justify-between">
-                <span className="flex items-center gap-2"><MessageCircle className="h-5 w-5" /> WHATSAPP</span>
-                <ArrowLeft className="h-6 w-6" />
+              <a href="https://wa.me/972500000000" target="_blank" rel="noreferrer" className="brutal-border brutal-shadow bg-[hsl(var(--brutal-lime))] px-6 py-5 font-display text-2xl uppercase flex items-center justify-between group">
+                <span className="flex items-center gap-2"><MessageCircle className="h-5 w-5 animate-wiggle" /> WHATSAPP</span>
+                <ArrowLeft className="h-6 w-6 transition-transform group-hover:-translate-x-2" />
               </a>
-              <a href="#work" className="brutal-border brutal-shadow bg-background px-6 py-5 font-display text-2xl uppercase flex items-center justify-between">
-                עבודות <ArrowLeft className="h-6 w-6" />
+              <a href="#work" className="brutal-border brutal-shadow bg-background px-6 py-5 font-display text-2xl uppercase flex items-center justify-between group">
+                <span>עבודות</span>
+                <ArrowLeft className="h-6 w-6 transition-transform group-hover:-translate-x-2" />
               </a>
             </div>
           </div>
 
-          {/* Stats */}
+          {/* Stats — animated counters */}
           <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { v: "30+", l: "פרויקטים", c: "var(--brutal-yellow)" },
-              { v: "8X", l: "מהיר יותר", c: "var(--brutal-pink)" },
-              { v: "24H", l: "תגובה", c: "var(--brutal-lime)" },
-              { v: "100%", l: "מותאם", c: "var(--brutal-blue)" },
-            ].map((s) => (
-              <div key={s.l} className="brutal-border brutal-shadow p-6 text-center" style={{ background: `hsl(${s.c})` }}>
-                <div className="font-display text-5xl uppercase">{s.v}</div>
+              { v: 30, suffix: "+", l: "פרויקטים", c: "var(--brutal-yellow)" },
+              { v: 8, suffix: "X", l: "מהיר יותר", c: "var(--brutal-pink)" },
+              { v: 24, suffix: "H", l: "תגובה", c: "var(--brutal-lime)" },
+              { v: 100, suffix: "%", l: "מותאם", c: "var(--brutal-blue)" },
+            ].map((s, i) => (
+              <div
+                key={s.l}
+                className="brutal-border brutal-shadow p-6 text-center transition-transform hover:-translate-y-1 hover:rotate-1"
+                style={{ background: `hsl(${s.c})`, animationDelay: `${i * 0.08}s` }}
+              >
+                <div className="font-display text-5xl uppercase">
+                  <CountUp to={s.v} suffix={s.suffix} />
+                </div>
                 <div className="text-xs font-bold uppercase mt-2">{s.l}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Live ticker */}
+      <BrutalTicker bg="var(--brutal-yellow)" />
 
       {/* New AI sections */}
       <div className="border-t-2 border-foreground bg-[hsl(var(--brutal-pink))]/30">
