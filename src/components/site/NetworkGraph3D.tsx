@@ -24,9 +24,6 @@ function getThemeColors() {
 function Nodes({ count = 22 }: { count?: number }) {
   const groupRef = useRef<THREE.Group>(null);
   const colors = useMemo(() => getThemeColors(), []);
-  const matPrimary = useMemo(() => new THREE.MeshBasicMaterial({ color: colors.primary }), [colors.primary]);
-  const matAccent = useMemo(() => new THREE.MeshBasicMaterial({ color: colors.accent }), [colors.accent]);
-  const lineMat = useMemo(() => new THREE.LineBasicMaterial({ color: colors.primary, transparent: true, opacity: 0.18 }), [colors.primary]);
 
   const nodes = useMemo(() => {
     return Array.from({ length: count }, () => ({
