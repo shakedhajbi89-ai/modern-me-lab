@@ -13,8 +13,6 @@ import { ScrollProgressBar } from "@/components/site/Parallax";
 import FloatingDock from "@/components/site/FloatingDock";
 
 import Method from "@/components/site/Method";
-import Testimonials from "@/components/site/Testimonials";
-import FAQ from "@/components/site/FAQ";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 
@@ -52,8 +50,6 @@ const V1DarkTech = () => {
         <Reveal y={40}><AIBriefGenerator variant="organic" /></Reveal>
         <Reveal><Mastery variant="organic" /></Reveal>
         <Reveal><Method /></Reveal>
-        <Reveal><Testimonials /></Reveal>
-        <Reveal><FAQ /></Reveal>
         <Reveal y={40}><CTALiving /></Reveal>
         <Reveal><Contact /></Reveal>
       </main>
