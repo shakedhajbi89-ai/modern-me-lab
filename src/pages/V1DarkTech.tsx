@@ -1,11 +1,17 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Nav from "@/components/site/Nav";
-import Hero from "@/components/site/Hero";
+import HeroEpic from "@/components/site/HeroEpic";
+import LiveMetrics from "@/components/site/LiveMetrics";
 import About from "@/components/site/About";
 import Capabilities from "@/components/site/Capabilities";
 import TechStack from "@/components/site/TechStack";
+import Mastery from "@/components/site/Mastery";
 import Method from "@/components/site/Method";
+import CaseStudy from "@/components/site/CaseStudy";
 import Work from "@/components/site/Work";
+import TerminalChat from "@/components/site/TerminalChat";
+import AIBriefGenerator from "@/components/site/AIBriefGenerator";
 import Testimonials from "@/components/site/Testimonials";
 import Values from "@/components/site/Values";
 import FAQ from "@/components/site/FAQ";
@@ -13,8 +19,6 @@ import CTA from "@/components/site/CTA";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 import StickyCTA from "@/components/site/StickyCTA";
-
-import { Link } from "react-router-dom";
 
 const V1DarkTech = () => {
   useEffect(() => {
@@ -30,12 +34,17 @@ const V1DarkTech = () => {
       </Link>
       <Nav />
       <main>
-        <Hero />
-        <TechStack />
-        <About />
+        <HeroEpic />
+        <LiveMetrics variant="dark" />
+        <AIBriefGenerator variant="dark" />
         <Capabilities />
-        <Method />
+        <CaseStudy variant="dark" />
+        <Mastery variant="dark" />
+        <TechStack />
         <Work />
+        <TerminalChat variant="dark" />
+        <About />
+        <Method />
         <Testimonials />
         <Values />
         <FAQ />
