@@ -209,9 +209,15 @@ export default function Brutal() {
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s) => (
-              <div key={s.title} className="brutal-border brutal-shadow bg-background p-7">
-                <div className="brutal-border w-14 h-14 flex items-center justify-center mb-5" style={{ background: `hsl(${s.c})` }}>
+            {services.map((s, i) => (
+              <div
+                key={s.title}
+                className="brutal-border brutal-shadow bg-background p-7 transition-all duration-200 hover:-translate-y-2 hover:rotate-[-1deg]"
+              >
+                <div
+                  className="brutal-border w-14 h-14 flex items-center justify-center mb-5 transition-transform group-hover:rotate-12"
+                  style={{ background: `hsl(${s.c})` }}
+                >
                   <s.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-display text-2xl uppercase mb-3">{s.title}</h3>
@@ -233,6 +239,9 @@ export default function Brutal() {
           ))}
         </div>
       </section>
+
+      {/* Reverse ticker */}
+      <BrutalTicker bg="var(--brutal-blue)" reverse />
 
       {/* Method */}
       <section id="method" className="py-24 border-t-2 border-foreground">
