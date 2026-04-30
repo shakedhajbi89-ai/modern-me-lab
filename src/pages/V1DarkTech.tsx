@@ -8,7 +8,7 @@ import CTALiving from "@/components/site/CTALiving";
 import LiveMetrics from "@/components/site/LiveMetrics";
 import Mastery from "@/components/site/Mastery";
 import AIBriefGenerator from "@/components/site/AIBriefGenerator";
-import TerminalChat from "@/components/site/TerminalChat";
+
 import Method from "@/components/site/Method";
 import Testimonials from "@/components/site/Testimonials";
 import FAQ from "@/components/site/FAQ";
@@ -47,7 +47,6 @@ const V1DarkTech = () => {
         <AIBriefGenerator variant="organic" />
         <Mastery variant="organic" />
         <Method />
-        <TerminalChat variant="organic" />
         <Testimonials />
         <FAQ />
         <CTALiving />
