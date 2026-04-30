@@ -325,7 +325,7 @@ export default function Brutal() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <div key={t.n} className="brutal-border brutal-shadow bg-background p-7">
+              <div key={t.n} className="brutal-border brutal-shadow bg-background p-7 transition-all duration-200 hover:-translate-y-2 hover:rotate-1">
                 <Quote className="h-8 w-8 mb-4" />
                 <p className="font-bold leading-relaxed mb-6 text-lg">"{t.q}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t-2 border-foreground">
