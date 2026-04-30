@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Leaf, Heart, Compass, Sun, Mail, Linkedin, Github, Bot, Workflow, LayoutDashboard, Database, Sparkles, Code2, Quote, MessageCircle, X, TrendingUp, Users, Zap } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import LiveMetrics from "@/components/site/LiveMetrics";
+import AIBriefGenerator from "@/components/site/AIBriefGenerator";
+import CaseStudy from "@/components/site/CaseStudy";
+import TerminalChat from "@/components/site/TerminalChat";
+import Mastery from "@/components/site/Mastery";
 
 const services = [
   { icon: Bot, title: "סוכני AI", desc: "סוכנים מבוססי Claude/GPT שמבינים, מחליטים ופועלים.", c: "var(--organic-peach)" },
@@ -144,6 +149,13 @@ export default function Organic() {
           </div>
         </div>
       </section>
+
+      {/* New AI sections */}
+      <AIBriefGenerator variant="organic" />
+      <LiveMetrics variant="organic" />
+      <CaseStudy variant="organic" />
+      <Mastery variant="organic" />
+      <TerminalChat variant="organic" />
 
       {/* About */}
       <section id="about" className="relative py-32">

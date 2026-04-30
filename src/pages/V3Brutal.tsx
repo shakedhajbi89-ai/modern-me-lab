@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, Linkedin, Github, Star, Zap, Target, Shield, Bot, Workflow, LayoutDashboard, Database, Sparkles, Code2, Quote, MessageCircle, X, TrendingUp, Users } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import LiveMetrics from "@/components/site/LiveMetrics";
+import AIBriefGenerator from "@/components/site/AIBriefGenerator";
+import CaseStudy from "@/components/site/CaseStudy";
+import TerminalChat from "@/components/site/TerminalChat";
+import Mastery from "@/components/site/Mastery";
 
 const services = [
   { icon: Bot, title: "סוכני AI", desc: "סוכנים מבוססי Claude/GPT שמבינים, מחליטים ופועלים.", c: "var(--brutal-yellow)" },
@@ -130,6 +135,23 @@ export default function Brutal() {
           </div>
         </div>
       </section>
+
+      {/* New AI sections */}
+      <div className="border-t-2 border-foreground bg-[hsl(var(--brutal-pink))]/30">
+        <AIBriefGenerator variant="brutal" />
+      </div>
+      <div className="border-t-2 border-foreground bg-[hsl(var(--brutal-yellow))]/40">
+        <LiveMetrics variant="brutal" />
+      </div>
+      <div className="border-t-2 border-foreground">
+        <CaseStudy variant="brutal" />
+      </div>
+      <div className="border-t-2 border-foreground bg-[hsl(var(--brutal-lime))]/30">
+        <Mastery variant="brutal" />
+      </div>
+      <div className="border-t-2 border-foreground bg-[hsl(var(--brutal-blue))]/20">
+        <TerminalChat variant="brutal" />
+      </div>
 
       {/* About */}
       <section id="about" className="py-24 border-t-2 border-foreground bg-[hsl(var(--brutal-yellow))]">

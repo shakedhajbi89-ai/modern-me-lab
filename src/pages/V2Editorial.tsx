@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowUpLeft, Mail, Linkedin, Github, Bot, Workflow, LayoutDashboard, Database, Sparkles, Code2, Quote, MessageCircle, X, TrendingUp, Users, Zap } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import LiveMetrics from "@/components/site/LiveMetrics";
+import AIBriefGenerator from "@/components/site/AIBriefGenerator";
+import CaseStudy from "@/components/site/CaseStudy";
+import TerminalChat from "@/components/site/TerminalChat";
+import Mastery from "@/components/site/Mastery";
 
 const sections = [
   { id: "about", label: "עליי" },
@@ -155,6 +160,23 @@ export default function Editorial() {
           </div>
         </div>
       </section>
+
+      {/* New AI sections */}
+      <div className="border-t border-border">
+        <AIBriefGenerator variant="editorial" />
+      </div>
+      <div className="border-t border-border bg-secondary/30">
+        <LiveMetrics variant="editorial" />
+      </div>
+      <div className="border-t border-border">
+        <CaseStudy variant="editorial" />
+      </div>
+      <div className="border-t border-border bg-secondary/30">
+        <Mastery variant="editorial" />
+      </div>
+      <div className="border-t border-border">
+        <TerminalChat variant="editorial" />
+      </div>
 
       {/* About */}
       <section id="about" className="py-32">
