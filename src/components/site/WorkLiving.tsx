@@ -1,4 +1,5 @@
 import { ArrowUpLeft } from "lucide-react";
+import { RevealGroup, RevealItem } from "./Reveal";
 
 /**
  * Editorial-style case studies. One bold metric per project.
@@ -50,53 +51,53 @@ export default function WorkLiving() {
           </p>
         </div>
 
-        <div className="space-y-px border-y border-border">
-          {projects.map((p, i) => (
-            <a
-              key={p.name}
-              href="#contact"
-              className="group block py-10 lg:py-14 border-b border-border last:border-b-0 transition-colors hover:bg-card/50"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-baseline">
-                <div className="lg:col-span-1 mono text-xs text-muted-foreground tabular-nums">
-                  {p.n}
-                </div>
-                <div className="lg:col-span-5">
-                  <div className="mono text-[11px] text-primary mb-2">{p.kicker}</div>
-                  <h3 className="font-display text-3xl lg:text-5xl leading-[1.05] tracking-tight text-foreground transition-colors group-hover:text-primary">
-                    {p.name}
-                    <ArrowUpLeft className="inline-block h-6 w-6 lg:h-8 lg:w-8 ml-2 text-muted-foreground transition-all group-hover:text-primary group-hover:-translate-x-1 group-hover:translate-y-1" />
-                  </h3>
-                </div>
-                <div className="lg:col-span-4 text-muted-foreground leading-relaxed">
-                  {p.lead}
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {p.stack.map((s) => (
-                      <span
-                        key={s}
-                        className="mono text-[10px] rounded-full border border-border bg-card px-2.5 py-1 text-muted-foreground"
-                      >
-                        {s}
-                      </span>
-                    ))}
+        <RevealGroup className="space-y-px border-y border-border" stagger={0.1}>
+          {projects.map((p) => (
+            <RevealItem key={p.name}>
+              <a
+                href="#contact"
+                className="group block py-10 lg:py-14 border-b border-border last:border-b-0 transition-colors hover:bg-card/50"
+              >
+                <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-baseline">
+                  <div className="lg:col-span-1 mono text-xs text-muted-foreground tabular-nums">
+                    {p.n}
+                  </div>
+                  <div className="lg:col-span-5">
+                    <div className="mono text-[11px] text-primary mb-2">{p.kicker}</div>
+                    <h3 className="font-display text-3xl lg:text-5xl leading-[1.05] tracking-tight text-foreground transition-colors group-hover:text-primary">
+                      {p.name}
+                      <ArrowUpLeft className="inline-block h-6 w-6 lg:h-8 lg:w-8 ml-2 text-muted-foreground transition-all group-hover:text-primary group-hover:-translate-x-1 group-hover:translate-y-1" />
+                    </h3>
+                  </div>
+                  <div className="lg:col-span-4 text-muted-foreground leading-relaxed">
+                    {p.lead}
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {p.stack.map((s) => (
+                        <span
+                          key={s}
+                          className="mono text-[10px] rounded-full border border-border bg-card px-2.5 py-1 text-muted-foreground"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="lg:col-span-2 text-right">
+                    <div className="font-display text-4xl lg:text-5xl text-primary tabular-nums leading-none">
+                      {p.metric.v}
+                    </div>
+                    <div className="mt-2 mono text-[10px] text-muted-foreground">
+                      {p.metric.l}
+                    </div>
+                    <div className="mt-3 mono text-[10px] text-muted-foreground/70">
+                      {p.year}
+                    </div>
                   </div>
                 </div>
-                <div className="lg:col-span-2 text-right">
-                  <div className="font-display text-4xl lg:text-5xl text-primary tabular-nums leading-none">
-                    {p.metric.v}
-                  </div>
-                  <div className="mt-2 mono text-[10px] text-muted-foreground">
-                    {p.metric.l}
-                  </div>
-                  <div className="mt-3 mono text-[10px] text-muted-foreground/70">
-                    {p.year}
-                  </div>
-                </div>
-              </div>
-            </a>
+              </a>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

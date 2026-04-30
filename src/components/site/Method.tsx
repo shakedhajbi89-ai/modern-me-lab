@@ -1,4 +1,5 @@
 import { Compass, Gauge, Layers, Sparkles } from "lucide-react";
+import { RevealGroup, RevealItem } from "./Reveal";
 
 const steps = [
   {
@@ -38,27 +39,26 @@ export default function Method() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <RevealGroup className="grid md:grid-cols-2 gap-6 lg:gap-8" stagger={0.12}>
           {steps.map((s) => {
             const Icon = s.icon;
             return (
-              <article
-                key={s.title}
-                className="group relative rounded-3xl border border-border/70 bg-card/60 backdrop-blur-sm p-8 lg:p-10 transition-all duration-700 hover:border-primary/40 hover:bg-card hover:-translate-y-1"
-              >
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6 transition-all duration-700 group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Icon className="h-6 w-6" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-display font-semibold text-2xl text-foreground mb-3 leading-snug">
-                  {s.title}
-                </h3>
-                <p className="text-muted-foreground leading-[1.8] text-[16px]">
-                  {s.body}
-                </p>
-              </article>
+              <RevealItem key={s.title}>
+                <article className="group relative h-full rounded-3xl border border-border/70 bg-card/60 backdrop-blur-sm p-8 lg:p-10 transition-all duration-700 hover:border-primary/40 hover:bg-card hover:-translate-y-1">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-6 transition-all duration-700 group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Icon className="h-6 w-6" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-display font-semibold text-2xl text-foreground mb-3 leading-snug">
+                    {s.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-[1.8] text-[16px]">
+                    {s.body}
+                  </p>
+                </article>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

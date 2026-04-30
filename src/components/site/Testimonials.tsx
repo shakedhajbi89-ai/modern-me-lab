@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { RevealGroup, RevealItem } from "./Reveal";
 
 const testimonials = [
   {
@@ -30,27 +31,25 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
-          {testimonials.map((t, i) => (
-            <div
-              key={t.name}
-              className="group relative rounded-3xl border border-border bg-card p-7 hover:-translate-y-1 hover:border-primary/40 transition-all duration-500 animate-fade-in-up"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <Quote className="h-8 w-8 text-primary/40 mb-4" />
-              <p className="text-foreground/90 leading-relaxed mb-6 text-[15px]">"{t.quote}"</p>
-              <div className="flex items-center gap-3 pt-5 border-t border-border">
-                <div className="h-10 w-10 rounded-full bg-gradient-brand flex items-center justify-center font-display font-bold text-primary-foreground">
-                  {t.name[0]}
-                </div>
-                <div>
-                  <div className="font-medium text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
+        <RevealGroup className="grid md:grid-cols-3 gap-5" stagger={0.12}>
+          {testimonials.map((t) => (
+            <RevealItem key={t.name}>
+              <div className="group relative h-full rounded-3xl border border-border bg-card p-7 hover:-translate-y-1 hover:border-primary/40 transition-all duration-500">
+                <Quote className="h-8 w-8 text-primary/40 mb-4" />
+                <p className="text-foreground/90 leading-relaxed mb-6 text-[15px]">"{t.quote}"</p>
+                <div className="flex items-center gap-3 pt-5 border-t border-border">
+                  <div className="h-10 w-10 rounded-full bg-gradient-brand flex items-center justify-center font-display font-bold text-primary-foreground">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <div className="font-medium text-sm">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

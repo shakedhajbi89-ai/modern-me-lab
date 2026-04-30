@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Activity, Zap, Bot, Globe, TrendingUp, Cpu } from "lucide-react";
+import { RevealGroup, RevealItem } from "./Reveal";
 
 /** Live-ish metrics dashboard — values animate to feel real. */
 
