@@ -8,6 +8,8 @@ import CTALiving from "@/components/site/CTALiving";
 import LiveMetrics from "@/components/site/LiveMetrics";
 import Mastery from "@/components/site/Mastery";
 import AIBriefGenerator from "@/components/site/AIBriefGenerator";
+import { Reveal } from "@/components/site/Reveal";
+import { ScrollProgressBar } from "@/components/site/Parallax";
 
 import Method from "@/components/site/Method";
 import Testimonials from "@/components/site/Testimonials";
@@ -38,21 +40,22 @@ const V1DarkTech = () => {
       >
         ← גרסאות
       </Link>
+      <ScrollProgressBar />
       <NavLiving />
       <main>
         <HeroLiving />
-        <AboutLiving />
-        <WorkLiving />
-        <LiveMetrics variant="organic" />
-        <AIBriefGenerator variant="organic" />
-        <Mastery variant="organic" />
-        <Method />
-        <Testimonials />
-        <FAQ />
-        <CTALiving />
-        <Contact />
+        <Reveal><AboutLiving /></Reveal>
+        <Reveal y={40}><WorkLiving /></Reveal>
+        <Reveal><LiveMetrics variant="organic" /></Reveal>
+        <Reveal y={40}><AIBriefGenerator variant="organic" /></Reveal>
+        <Reveal><Mastery variant="organic" /></Reveal>
+        <Reveal><Method /></Reveal>
+        <Reveal><Testimonials /></Reveal>
+        <Reveal><FAQ /></Reveal>
+        <Reveal y={40}><CTALiving /></Reveal>
+        <Reveal><Contact /></Reveal>
       </main>
-      <Footer />
+      <Reveal y={20}><Footer /></Reveal>
     </div>
   );
 };
