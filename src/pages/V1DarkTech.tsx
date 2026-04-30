@@ -10,6 +10,7 @@ import Mastery from "@/components/site/Mastery";
 import AIBriefGenerator from "@/components/site/AIBriefGenerator";
 import { Reveal } from "@/components/site/Reveal";
 import { ScrollProgressBar } from "@/components/site/Parallax";
+import FloatingDock from "@/components/site/FloatingDock";
 
 import Method from "@/components/site/Method";
 import Testimonials from "@/components/site/Testimonials";
@@ -42,7 +43,8 @@ const V1DarkTech = () => {
       </Link>
       <ScrollProgressBar />
       <NavLiving />
-      <main>
+      <FloatingDock />
+      <main id="main">
         <HeroLiving />
         <Reveal><AboutLiving /></Reveal>
         <Reveal y={40}><WorkLiving /></Reveal>
