@@ -1,0 +1,7 @@
+project_id = "a91ce057-d50b-4ced-940c-7a5e0cd306e3"
+
+[functions.ai-brief]
+verify_jwt = false
+
+[functions.ai-chat]
+verify_jwt = false
