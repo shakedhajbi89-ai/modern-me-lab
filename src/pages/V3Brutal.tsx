@@ -7,6 +7,8 @@ import AIBriefGenerator from "@/components/site/AIBriefGenerator";
 import CaseStudy from "@/components/site/CaseStudy";
 import TerminalChat from "@/components/site/TerminalChat";
 import Mastery from "@/components/site/Mastery";
+import BrutalTicker from "@/components/site/BrutalTicker";
+import CountUp from "@/components/site/CountUp";
 
 const services = [
   { icon: Bot, title: "סוכני AI", desc: "סוכנים מבוססי Claude/GPT שמבינים, מחליטים ופועלים.", c: "var(--brutal-yellow)" },
