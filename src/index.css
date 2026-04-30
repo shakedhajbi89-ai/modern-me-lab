@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;700;900&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -369,3 +369,115 @@
 .theme-organic .blob-2 {
   border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%;
 }
+
+/* ============================================
+   VARIANT 1 — LIVING SYSTEM × QUIET INTELLIGENCE
+   Calm cream base, mineral green signature, amber accents.
+============================================ */
+.theme-living {
+  --background: 36 35% 92%;             /* warm cream #F0EAE0 */
+  --foreground: 220 16% 13%;            /* slate ink #1C1F26 */
+  --card: 36 40% 96%;                   /* lighter paper */
+  --card-foreground: 220 16% 13%;
+  --popover: 36 40% 96%;
+  --popover-foreground: 220 16% 13%;
+
+  /* Signature mineral green */
+  --primary: 162 22% 45%;               /* mineral green #5C8A7A */
+  --primary-foreground: 36 40% 96%;
+
+  /* Amber — only for live/glow moments */
+  --accent: 42 50% 60%;                 /* warm amber #C9A961 */
+  --accent-foreground: 220 16% 13%;
+
+  --secondary: 36 25% 87%;
+  --secondary-foreground: 220 16% 13%;
+  --muted: 36 22% 89%;
+  --muted-foreground: 220 10% 38%;
+
+  --destructive: 8 55% 50%;
+  --destructive-foreground: 36 40% 96%;
+
+  --border: 36 18% 82%;
+  --input: 36 18% 82%;
+  --ring: 162 22% 45%;
+
+  --grid-line: 36 18% 84%;
+  --surface-elevated: 36 40% 96%;
+  --glow: 162 22% 45%;
+
+  --gradient-hero:
+    radial-gradient(ellipse 70% 60% at 20% 10%, hsl(162 22% 45% / 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 90%, hsl(42 50% 60% / 0.18), transparent 60%);
+  --gradient-brand: linear-gradient(135deg, hsl(162 22% 40%), hsl(162 28% 55%));
+  --gradient-text: linear-gradient(135deg, hsl(220 16% 13%) 0%, hsl(162 22% 38%) 100%);
+  --gradient-card: linear-gradient(180deg, hsl(36 40% 96%) 0%, hsl(36 35% 92%) 100%);
+  --gradient-border: linear-gradient(135deg, hsl(162 22% 45% / 0.5), hsl(42 50% 60% / 0.4));
+
+  --shadow-glow: 0 0 50px hsl(162 22% 45% / 0.18), 0 0 100px hsl(42 50% 60% / 0.10);
+  --shadow-card: 0 1px 0 hsl(220 16% 13% / 0.04), 0 30px 60px -32px hsl(220 16% 13% / 0.18);
+  --shadow-soft: 0 4px 24px hsl(220 16% 13% / 0.08);
+
+  font-family: 'Inter Tight', 'Heebo', system-ui, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, hsl(162 22% 45% / 0.10), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 110%, hsl(42 50% 60% / 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+.theme-living h1, .theme-living h2, .theme-living h3,
+.theme-living .font-display {
+  font-family: 'Fraunces', 'DM Serif Display', Georgia, serif;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+.theme-living .font-italic-serif {
+  font-family: 'Fraunces', 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.theme-living .text-gradient-brand {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.theme-living .grid-bg {
+  background-image:
+    linear-gradient(hsl(var(--grid-line)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--grid-line)) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+          mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+}
+.theme-living .glass {
+  background: hsl(36 40% 96% / 0.7);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid hsl(var(--border));
+}
+.theme-living .paper-grain {
+  background-image: radial-gradient(hsl(220 16% 13% / 0.035) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* Organic breathing blobs — slow, calm */
+@keyframes breathe {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(2%, -1.5%) scale(1.05); }
+  66% { transform: translate(-1.5%, 2%) scale(0.97); }
+}
+@keyframes breathe-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-3%, 2%) scale(1.07); }
+}
+.animate-breathe { animation: breathe 18s ease-in-out infinite; }
+.animate-breathe-slow { animation: breathe-2 26s ease-in-out infinite; }
+
+@keyframes amber-pulse {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 0 0 hsl(42 70% 60% / 0.4); }
+  50% { opacity: 1; box-shadow: 0 0 0 8px hsl(42 70% 60% / 0); }
+}
+.animate-amber-pulse { animation: amber-pulse 2.4s ease-in-out infinite; }
+
