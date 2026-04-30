@@ -12,43 +12,43 @@
 
 @layer base {
   :root {
-    /* Core surfaces */
-    --background: 230 25% 6%;
-    --foreground: 210 20% 96%;
+    /* Sage Tech — calm, confident, professional */
+    --background: 175 28% 6%;
+    --foreground: 150 15% 94%;
 
-    --card: 230 22% 9%;
-    --card-foreground: 210 20% 96%;
+    --card: 175 24% 9%;
+    --card-foreground: 150 15% 94%;
 
-    --popover: 230 22% 9%;
-    --popover-foreground: 210 20% 96%;
+    --popover: 175 24% 9%;
+    --popover-foreground: 150 15% 94%;
 
-    /* Brand — electric cyan/violet duotone */
-    --primary: 174 90% 55%;
-    --primary-foreground: 230 25% 6%;
+    /* Brand — sage + warm gold accent */
+    --primary: 158 55% 55%;
+    --primary-foreground: 175 28% 6%;
 
-    --accent: 270 90% 65%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 35 85% 65%;
+    --accent-foreground: 175 28% 6%;
 
-    --secondary: 230 20% 14%;
-    --secondary-foreground: 210 20% 96%;
+    --secondary: 175 20% 13%;
+    --secondary-foreground: 150 15% 94%;
 
-    --muted: 230 18% 12%;
-    --muted-foreground: 220 12% 65%;
+    --muted: 175 18% 11%;
+    --muted-foreground: 155 10% 62%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 150 15% 96%;
 
-    --border: 230 20% 16%;
-    --input: 230 20% 14%;
-    --ring: 174 90% 55%;
+    --border: 175 18% 15%;
+    --input: 175 18% 13%;
+    --ring: 158 55% 55%;
 
     --radius: 1rem;
 
     /* Custom brand tokens */
-    --glow: 174 90% 55%;
-    --glow-violet: 270 90% 65%;
-    --surface-elevated: 230 22% 11%;
-    --grid-line: 230 20% 14%;
+    --glow: 158 55% 55%;
+    --glow-violet: 35 85% 65%;
+    --surface-elevated: 175 22% 11%;
+    --grid-line: 175 18% 12%;
 
     /* Gradients */
     --gradient-hero: radial-gradient(ellipse at top, hsl(var(--accent) / 0.25), transparent 60%),
@@ -67,14 +67,14 @@
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --sidebar-background: 230 25% 6%;
-    --sidebar-foreground: 210 20% 96%;
-    --sidebar-primary: 174 90% 55%;
-    --sidebar-primary-foreground: 230 25% 6%;
-    --sidebar-accent: 230 20% 14%;
-    --sidebar-accent-foreground: 210 20% 96%;
-    --sidebar-border: 230 20% 16%;
-    --sidebar-ring: 174 90% 55%;
+    --sidebar-background: 175 28% 6%;
+    --sidebar-foreground: 150 15% 94%;
+    --sidebar-primary: 158 55% 55%;
+    --sidebar-primary-foreground: 175 28% 6%;
+    --sidebar-accent: 175 20% 13%;
+    --sidebar-accent-foreground: 150 15% 94%;
+    --sidebar-border: 175 18% 15%;
+    --sidebar-ring: 158 55% 55%;
   }
 }
 
