@@ -7,17 +7,25 @@ import * as THREE from "three";
  * Uses CSS variables --primary and --accent so it adapts to every theme.
  */
 
-function getThemeColors() {
-  if (typeof window === "undefined") return { primary: "#5dd4a6", accent: "#f0b06a" };
-  const root = document.documentElement;
-  // Try theme class first (for V2/V3/V4), fall back to :root
-  const styles = getComputedStyle(root);
-  const p = styles.getPropertyValue("--primary").trim();
-  const a = styles.getPropertyValue("--accent").trim();
-  const toHsl = (v: string, fallback: string) => v ? `hsl(${v})` : fallback;
+function hslStringToColor(s: string, fallback: string): THREE.Color {
+  // Expects "H S% L%" (CSS variable form)
+  const m = s.trim().match(/^(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)%\s+(\d+(?:\.\d+)?)%$/);
+  if (!m) return new THREE.Color(fallback);
+  const c = new THREE.Color();
+  c.setHSL(parseFloat(m[1]) / 360, parseFloat(m[2]) / 100, parseFloat(m[3]) / 100);
+  return c;
+}
+
+function getThemeColors(): { primary: THREE.Color; accent: THREE.Color } {
+  if (typeof window === "undefined") {
+    return { primary: new THREE.Color("#5dd4a6"), accent: new THREE.Color("#f0b06a") };
+  }
+  const styles = getComputedStyle(document.documentElement);
+  const p = styles.getPropertyValue("--primary");
+  const a = styles.getPropertyValue("--accent");
   return {
-    primary: toHsl(p, "#5dd4a6"),
-    accent: toHsl(a, "#f0b06a"),
+    primary: hslStringToColor(p, "#5dd4a6"),
+    accent: hslStringToColor(a, "#f0b06a"),
   };
 }
 
