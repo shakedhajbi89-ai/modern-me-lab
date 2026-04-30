@@ -9,18 +9,24 @@ import * as THREE from "three";
 
 function getThemeColors() {
   if (typeof window === "undefined") return { primary: "#5dd4a6", accent: "#f0b06a" };
-  const styles = getComputedStyle(document.documentElement);
+  const root = document.documentElement;
+  // Try theme class first (for V2/V3/V4), fall back to :root
+  const styles = getComputedStyle(root);
   const p = styles.getPropertyValue("--primary").trim();
   const a = styles.getPropertyValue("--accent").trim();
+  const toHsl = (v: string, fallback: string) => v ? `hsl(${v})` : fallback;
   return {
-    primary: p ? `hsl(${p})` : "#5dd4a6",
-    accent: a ? `hsl(${a})` : "#f0b06a",
+    primary: toHsl(p, "#5dd4a6"),
+    accent: toHsl(a, "#f0b06a"),
   };
 }
 
 function Nodes({ count = 22 }: { count?: number }) {
   const groupRef = useRef<THREE.Group>(null);
-  const colors = useMemo(getThemeColors, []);
+  const colors = useMemo(() => getThemeColors(), []);
+  const matPrimary = useMemo(() => new THREE.MeshBasicMaterial({ color: colors.primary }), [colors.primary]);
+  const matAccent = useMemo(() => new THREE.MeshBasicMaterial({ color: colors.accent }), [colors.accent]);
+  const lineMat = useMemo(() => new THREE.LineBasicMaterial({ color: colors.primary, transparent: true, opacity: 0.18 }), [colors.primary]);
 
   const nodes = useMemo(() => {
     return Array.from({ length: count }, () => ({
