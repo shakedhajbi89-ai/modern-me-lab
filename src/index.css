@@ -271,28 +271,31 @@
 /* ============================================
    VARIANT 3 — BOLD BRUTALIST
 ============================================ */
+/* Refined editorial-brutalist: warm cream + ink + single ochre accent */
 .theme-brutal {
-  --background: 50 100% 96%;
-  --foreground: 0 0% 6%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 6%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 6%;
-  --primary: 0 0% 6%;
-  --primary-foreground: 50 100% 96%;
-  --secondary: 50 95% 90%;
-  --secondary-foreground: 0 0% 6%;
-  --muted: 0 0% 95%;
-  --muted-foreground: 0 0% 30%;
-  --accent: 90 95% 55%;
-  --accent-foreground: 0 0% 6%;
-  --border: 0 0% 6%;
-  --input: 0 0% 6%;
-  --ring: 0 0% 6%;
-  --brutal-yellow: 50 100% 55%;
-  --brutal-pink: 340 95% 70%;
-  --brutal-blue: 220 95% 60%;
-  --brutal-lime: 90 95% 55%;
+  --background: 38 30% 95%;
+  --foreground: 220 15% 12%;
+  --card: 36 25% 98%;
+  --card-foreground: 220 15% 12%;
+  --popover: 36 25% 98%;
+  --popover-foreground: 220 15% 12%;
+  --primary: 220 15% 12%;
+  --primary-foreground: 38 30% 95%;
+  --secondary: 36 22% 91%;
+  --secondary-foreground: 220 15% 12%;
+  --muted: 36 18% 90%;
+  --muted-foreground: 220 8% 38%;
+  --accent: 32 65% 50%;
+  --accent-foreground: 38 30% 95%;
+  --border: 220 15% 12%;
+  --input: 220 15% 12%;
+  --ring: 32 65% 50%;
+  /* Muted, refined accent palette — used sparingly */
+  --brutal-yellow: 38 55% 78%;   /* warm sand */
+  --brutal-pink: 12 45% 70%;     /* dusty terracotta */
+  --brutal-blue: 210 25% 55%;    /* slate */
+  --brutal-lime: 70 25% 60%;     /* sage olive */
+  --brutal-ochre: 32 65% 50%;    /* signature accent */
   font-family: 'Archivo', 'Heebo', system-ui, sans-serif;
   background: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -300,18 +303,28 @@
 .theme-brutal h1, .theme-brutal h2, .theme-brutal h3,
 .theme-brutal .font-display {
   font-family: 'Archivo Black', 'Archivo', 'Heebo', system-ui, sans-serif;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
   font-weight: 900;
 }
+.theme-brutal .font-serif-display {
+  font-family: 'Fraunces', 'DM Serif Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
 .theme-brutal .brutal-shadow {
-  box-shadow: 6px 6px 0 0 hsl(var(--foreground));
-  transition: all 0.15s ease;
+  box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  transition: all 0.2s ease;
 }
 .theme-brutal .brutal-shadow:hover {
-  box-shadow: 10px 10px 0 0 hsl(var(--foreground));
+  box-shadow: 7px 7px 0 0 hsl(var(--foreground));
   transform: translate(-2px, -2px);
 }
-.theme-brutal .brutal-border { border: 2px solid hsl(var(--foreground)); }
+.theme-brutal .brutal-border { border: 1.5px solid hsl(var(--foreground)); }
+.theme-brutal .paper-grain {
+  background-image:
+    radial-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
 
 /* ============================================
    VARIANT 4 — ORGANIC SOFT MODERN
