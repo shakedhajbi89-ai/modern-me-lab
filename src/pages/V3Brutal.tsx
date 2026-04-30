@@ -261,7 +261,7 @@ export default function Brutal() {
               { n: "03", t: "בונה מותאם", b: "אין פתרון מהמדף. כל מערכת נתפרת לאיך שאתה עובד באמת.", c: "var(--brutal-lime)" },
               { n: "04", t: "AI חכם, לא טרנדי", b: "בוחר את הטכנולוגיה הנכונה — לא את זו שכותבים עליה השבוע.", c: "var(--brutal-blue)" },
             ].map((s) => (
-              <div key={s.n} className="brutal-border brutal-shadow bg-background p-8">
+              <div key={s.n} className="brutal-border brutal-shadow bg-background p-8 transition-all duration-200 hover:-translate-y-2 hover:rotate-1">
                 <div className="flex items-start justify-between mb-4">
                   <div className="font-display text-5xl">{s.n}</div>
                   <div className="brutal-border w-12 h-12" style={{ background: `hsl(${s.c})` }} />
