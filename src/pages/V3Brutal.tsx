@@ -283,7 +283,7 @@ export default function Brutal() {
           </div>
           <div className="space-y-6">
             {projects.map((p) => (
-              <div key={p.n} className="brutal-border brutal-shadow bg-background grid lg:grid-cols-12 gap-0">
+              <div key={p.n} className="brutal-border brutal-shadow bg-background grid lg:grid-cols-12 gap-0 transition-all duration-200 hover:-translate-y-1 hover:translate-x-1">
                 <div className="lg:col-span-4 brutal-border lg:border-y-0 lg:border-r-0 lg:border-l-2 aspect-[4/3] lg:aspect-auto flex items-center justify-center" style={{ background: `hsl(${p.c})` }}>
                   <div className="text-center p-6">
                     <div className="font-mono text-xs font-bold mb-2 uppercase">{p.t}</div>
