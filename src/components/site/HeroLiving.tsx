@@ -30,7 +30,7 @@ export default function HeroLiving() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center justify-center rounded-xl border border-white/30 hover:bg-white/10 text-white px-7 py-3.5 text-sm md:text-base font-semibold transition-all backdrop-blur-sm min-h-[44px]"
+            className="inline-flex items-center justify-center rounded-xl border border-black/20 hover:bg-black/5 text-[#1a1a1a] px-7 py-3.5 text-sm md:text-base font-semibold transition-all backdrop-blur-sm min-h-[44px]"
           >
             ראו מה אני בונה
           </a>
