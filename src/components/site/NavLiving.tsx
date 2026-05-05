@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { id: "about", label: "Profile" },
-  { id: "work", label: "Work" },
-  { id: "live", label: "Live" },
-  { id: "brief", label: "Brief" },
-  { id: "contact", label: "Contact" },
+  { id: "services", label: "שירותים" },
+  { id: "process", label: "תהליך" },
+  { id: "for-whom", label: "למי" },
+  { id: "contact", label: "צור קשר" },
 ];
 
 export default function NavLiving() {
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("about");
+  const [active, setActive] = useState("services");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -44,19 +43,24 @@ export default function NavLiving() {
       )}
     >
       <div className="container-narrow flex items-center justify-between gap-4">
-        {/* SH initials mark */}
-        <a href="#top" className="group flex items-center gap-3">
-          <span className="relative flex h-10 w-10 items-center justify-center rounded-full border border-foreground/80 text-foreground font-display text-sm tracking-tight">
-            SH
-            <span className="absolute -inset-1 rounded-full border border-primary/0 group-hover:border-primary/40 transition-colors" />
+        {/* Brand mark */}
+        <a href="#top" className="group flex items-center gap-2.5" dir="ltr">
+          <span className="font-display text-base font-medium tracking-tight text-foreground">
+            Shaked
           </span>
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="mono text-[10px] text-muted-foreground tracking-wider uppercase">
-              calm.systems
-            </span>
-            <span className="font-display text-sm tracking-tight text-foreground">
-              <em className="font-italic-serif">that think</em>
-            </span>
+          <span
+            className="inline-block"
+            style={{
+              width: "3px",
+              height: "20px",
+              borderRadius: "999px",
+              background: "linear-gradient(180deg, #0066ff, #4d8eff, #0066ff)",
+              boxShadow: "0 0 8px rgba(0,102,255,0.5)",
+            }}
+          />
+          <span className="font-display text-base tracking-tight">
+            <span className="text-[#0066ff] font-black">AI</span>
+            <span className="text-foreground font-extrabold"> Studio</span>
           </span>
         </a>
 
@@ -86,14 +90,14 @@ export default function NavLiving() {
         </nav>
 
         <a
-          href="#brief"
-          className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-xs sm:text-sm font-medium transition-all hover:scale-[1.03] hover:bg-primary/95"
+          href="#contact"
+          className="group inline-flex items-center gap-2 rounded-xl bg-[#0066ff] hover:bg-[#4d8eff] text-white px-4 py-2 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.03]"
         >
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-amber-pulse rounded-full bg-accent" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            <span className="absolute inline-flex h-full w-full animate-amber-pulse rounded-full bg-white/70" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
           </span>
-          התחל Brief
+          בוא נדבר
         </a>
       </div>
     </header>
