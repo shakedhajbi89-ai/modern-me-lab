@@ -132,8 +132,9 @@ export default function AnimatedLogo() {
       <style>{`
         .logo-stage {
           width: 100%;
+          max-width: 100vw;
           height: 100%;
-          min-height: 600px;
+          min-height: clamp(420px, 70vh, 600px);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,8 +146,8 @@ export default function AnimatedLogo() {
           position: absolute;
           top: 50%;
           left: 50%;
-          width: 8px;
-          height: clamp(70px, 10vw, 130px);
+          width: clamp(5px, 1.2vw, 8px);
+          height: clamp(50px, 12vw, 130px);
           background: linear-gradient(180deg, #1a1a1a 0%, #404040 50%, #1a1a1a 100%);
           border-radius: 4px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
