@@ -161,7 +161,8 @@ export default function AnimatedLogo() {
           top: 50%;
           right: 50%;
           width: 50vw;
-          height: clamp(80px, 11vw, 140px);
+          max-width: 50vw;
+          height: clamp(60px, 14vw, 140px);
           overflow: hidden;
           z-index: 5;
           transform: translateY(-50%);
@@ -171,17 +172,17 @@ export default function AnimatedLogo() {
           position: absolute;
           top: 50%;
           right: 0;
-          padding-right: 30px;
+          padding-right: clamp(10px, 3vw, 30px);
           display: flex;
           align-items: center;
           font-family: 'Inter', sans-serif;
           font-weight: 400;
-          font-size: clamp(34px, 5.5vw, 70px);
+          font-size: clamp(26px, 9vw, 70px);
           color: #1a1a1a;
           white-space: nowrap;
           transform: translate(100%, -50%);
           letter-spacing: -0.5px;
-          height: clamp(80px, 11vw, 140px);
+          height: clamp(60px, 14vw, 140px);
           text-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .text-right-mask {
@@ -189,7 +190,8 @@ export default function AnimatedLogo() {
           top: 50%;
           left: 50%;
           width: 50vw;
-          height: clamp(80px, 11vw, 140px);
+          max-width: 50vw;
+          height: clamp(60px, 14vw, 140px);
           overflow: hidden;
           z-index: 5;
           transform: translateY(-50%);
@@ -199,7 +201,7 @@ export default function AnimatedLogo() {
           position: absolute;
           top: 50%;
           left: 0;
-          padding-left: 30px;
+          padding-left: clamp(10px, 3vw, 30px);
           display: flex;
           align-items: center;
           gap: 8px;
@@ -208,11 +210,11 @@ export default function AnimatedLogo() {
           white-space: nowrap;
           transform: translate(-100%, -50%);
           letter-spacing: -0.5px;
-          height: clamp(80px, 11vw, 140px);
+          height: clamp(60px, 14vw, 140px);
         }
         .text-right .ai {
           font-weight: 900;
-          font-size: clamp(50px, 8vw, 100px);
+          font-size: clamp(36px, 12vw, 100px);
           color: #0066ff;
           text-shadow: 0 0 40px rgba(0, 102, 255, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
           line-height: 1;
