@@ -8,7 +8,7 @@ export default function HeroLiving() {
       className="relative overflow-hidden min-h-screen flex flex-col"
     >
       {/* Animated logo fills the stage */}
-      <div className="relative flex-1 min-h-[600px]">
+      <div className="relative flex-1 min-h-[440px] md:min-h-[600px] overflow-hidden">
         <AnimatedLogo />
       </div>
 
