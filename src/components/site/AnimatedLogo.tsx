@@ -141,6 +141,10 @@ export default function AnimatedLogo() {
           background: transparent;
           position: relative;
           overflow: hidden;
+          transform: translateX(-2.5vw);
+        }
+        @media (min-width: 768px) {
+          .logo-stage { transform: none; }
         }
         .divider {
           position: absolute;
