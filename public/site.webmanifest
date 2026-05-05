@@ -1,0 +1,13 @@
+{
+  "name": "Shaked AI Studio",
+  "short_name": "Shaked AI Studio",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#1C1F26",
+  "background_color": "#F0EAE0",
+  "display": "standalone",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/"
+}
