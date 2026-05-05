@@ -131,6 +131,7 @@ export default function AnimatedLogo() {
       <div ref={shimmerRef} className="shimmer" />
       <style>{`
         .logo-stage {
+          --logo-center: 43%;
           width: 100%;
           max-width: 100vw;
           height: 100%;
@@ -141,15 +142,15 @@ export default function AnimatedLogo() {
           background: transparent;
           position: relative;
           overflow: hidden;
-          transform: translateX(-2.5vw);
+          box-sizing: border-box;
         }
         @media (min-width: 768px) {
-          .logo-stage { transform: none; }
+          .logo-stage { --logo-center: 50%; }
         }
         .divider {
           position: absolute;
           top: 50%;
-          left: 50%;
+          left: var(--logo-center);
           width: clamp(5px, 1.2vw, 8px);
           height: clamp(50px, 12vw, 130px);
           background: linear-gradient(180deg, #1a1a1a 0%, #404040 50%, #1a1a1a 100%);
@@ -163,9 +164,9 @@ export default function AnimatedLogo() {
         .text-left-mask {
           position: absolute;
           top: 50%;
-          right: 50%;
-          width: 50vw;
-          max-width: 50vw;
+          right: calc(100% - var(--logo-center));
+          width: var(--logo-center);
+          max-width: var(--logo-center);
           height: clamp(60px, 14vw, 140px);
           overflow: hidden;
           z-index: 5;
@@ -192,9 +193,9 @@ export default function AnimatedLogo() {
         .text-right-mask {
           position: absolute;
           top: 50%;
-          left: 50%;
-          width: 50vw;
-          max-width: 50vw;
+          left: var(--logo-center);
+          width: calc(100% - var(--logo-center));
+          max-width: calc(100% - var(--logo-center));
           height: clamp(60px, 14vw, 140px);
           overflow: hidden;
           z-index: 5;
@@ -208,7 +209,7 @@ export default function AnimatedLogo() {
           padding-left: clamp(10px, 3vw, 30px);
           display: flex;
           align-items: center;
-          gap: 8px;
+          gap: clamp(4px, 1.4vw, 8px);
           font-family: 'Inter', sans-serif;
           font-weight: 800;
           white-space: nowrap;
