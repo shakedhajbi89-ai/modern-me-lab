@@ -27,14 +27,11 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={reduce ? { opacity: 0 } : { opacity: 0, y, scale: 0.985, filter: "blur(6px)" }}
-      whileInView={
-        reduce
-          ? { opacity: 1 }
-          : { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }
-      }
+      initial={reduce ? { opacity: 0 } : { opacity: 0, y }}
+      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
       viewport={{ once, amount, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 0.9, ease, delay }}
+      transition={{ duration: 0.7, ease, delay }}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>
