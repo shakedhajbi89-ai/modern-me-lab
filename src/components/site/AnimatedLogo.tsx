@@ -123,7 +123,7 @@ export default function AnimatedLogo() {
       </div>
       <div ref={dividerRef} className="divider" />
       <div className="text-right-mask">
-        <div ref={textRightRef} className="text-right">
+        <div ref={textRightRef} className="text-right" dir="ltr">
           <span className="ai">AI</span>
           <span className="studio">Studio</span>
         </div>
