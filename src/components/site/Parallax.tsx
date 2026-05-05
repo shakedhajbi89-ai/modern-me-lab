@@ -34,10 +34,11 @@ export default function Parallax({
 /** Thin progress bar at top of viewport — global scroll indicator. */
 export function ScrollProgressBar() {
   const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 20, mass: 0.3 });
   return (
     <motion.div
       className="fixed top-0 inset-x-0 h-[2px] bg-primary/70 origin-left z-[70] pointer-events-none"
-      style={{ scaleX: scrollYProgress }}
+      style={{ scaleX, willChange: "transform" }}
     />
   );
 }
