@@ -11,7 +11,7 @@ const tools = [
 
 export default function ToolsShowcase() {
   return (
-    <section id="tools" className="relative py-16 md:py-24 surface-soft overflow-hidden">
+    <section id="tools" className="relative py-16 md:py-24 overflow-hidden">
       <div className="container-narrow">
         {/* Mobile: horizontal carousel */}
         <div className="md:hidden -mx-6 px-6 flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4" style={{ scrollbarWidth: "none" }}>
