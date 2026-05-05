@@ -221,7 +221,7 @@ export default function AnimatedLogo() {
         }
         .text-right .studio {
           font-weight: 800;
-          font-size: clamp(50px, 8vw, 100px);
+          font-size: clamp(36px, 12vw, 100px);
           color: #1a1a1a;
           line-height: 1;
           text-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
