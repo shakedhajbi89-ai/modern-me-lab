@@ -84,17 +84,13 @@ export function RevealItem({
 }) {
   const reduce = useReducedMotion();
   const item: Variants = {
-    hidden: reduce
-      ? { opacity: 0 }
-      : { opacity: 0, y, scale: 0.985, filter: "blur(6px)" },
+    hidden: reduce ? { opacity: 0 } : { opacity: 0, y },
     show: reduce
-      ? { opacity: 1, transition: { duration: 0.5 } }
+      ? { opacity: 1, transition: { duration: 0.4 } }
       : {
           opacity: 1,
           y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          transition: { duration: 0.85, ease },
+          transition: { duration: 0.65, ease },
         },
   };
   return (
