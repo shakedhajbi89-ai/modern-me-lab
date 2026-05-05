@@ -541,14 +541,15 @@ html.a11y-underline a {
 }
 
 html.a11y-contrast.theme-living {
-  --background: 36 40% 98%;
-  --foreground: 220 30% 4%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
   --card: 0 0% 100%;
-  --card-foreground: 220 30% 4%;
-  --muted-foreground: 220 20% 22%;
-  --primary: 162 40% 28%;
+  --card-foreground: 0 0% 0%;
+  --muted-foreground: 0 0% 15%;
+  --primary: 0 0% 0%;
   --primary-foreground: 0 0% 100%;
-  --border: 220 30% 20%;
+  --accent: 217 100% 38%;
+  --border: 0 0% 20%;
 }
 html.a11y-contrast {
   --muted-foreground: 0 0% 15%;
