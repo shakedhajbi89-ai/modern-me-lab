@@ -32,7 +32,7 @@ const StudioHome = () => {
         className="fixed inset-0 -z-10 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, #f8f8f8 0%, #ffffff 15%, #ffffff 60%, #f0f0f0 75%, #2a2a2a 92%, #1a1a1a 100%)",
+            "linear-gradient(180deg, #f8f8f8 0%, #ffffff 15%, #ffffff 60%, #ededed 75%, #5a5a5a 92%, #3d3d3d 100%)",
         }}
       />
       <ScrollProgressBar />
