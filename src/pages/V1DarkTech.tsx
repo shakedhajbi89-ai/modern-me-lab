@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import NavLiving from "@/components/site/NavLiving";
 import HeroLiving from "@/components/site/HeroLiving";
+import ToolsShowcase from "@/components/site/ToolsShowcase";
 import Services from "@/components/site/Services";
-import Process from "@/components/site/Process";
-import ForWhom from "@/components/site/ForWhom";
-import Contact from "@/components/site/Contact";
-import Footer from "@/components/site/Footer";
+import StudioNote from "@/components/site/StudioNote";
+import FAQ from "@/components/site/FAQ";
+import FinalCTA from "@/components/site/FinalCTA";
 import { Reveal } from "@/components/site/Reveal";
 import { ScrollProgressBar } from "@/components/site/Parallax";
 import FloatingDock from "@/components/site/FloatingDock";
@@ -29,15 +29,15 @@ const StudioHome = () => {
     <div className="theme-living min-h-screen text-foreground overflow-x-hidden">
       <ScrollProgressBar />
       <NavLiving />
-      <FloatingDock />
+      <FloatingDock whatsappNumber="972528360660" />
       <main id="main">
         <HeroLiving />
-        <Reveal><Services /></Reveal>
-        <Reveal y={40}><Process /></Reveal>
-        <Reveal><ForWhom /></Reveal>
-        <Reveal y={40}><Contact /></Reveal>
+        <Reveal><ToolsShowcase /></Reveal>
+        <Reveal y={40}><Services /></Reveal>
+        <Reveal><StudioNote /></Reveal>
+        <Reveal y={40}><FAQ /></Reveal>
+        <Reveal><FinalCTA /></Reveal>
       </main>
-      <Reveal y={20}><Footer /></Reveal>
     </div>
   );
 };
