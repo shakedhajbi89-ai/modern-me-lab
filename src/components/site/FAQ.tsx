@@ -1,60 +1,80 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useState } from "react";
+import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    q: "כמה זמן לוקח לבנות מוצר?",
-    a: "תלוי בהיקף — אב-טיפוס פונקציונלי תוך 1-2 שבועות, מוצר MVP מלא בתוך 4-8 שבועות. אני עובד בספרינטים קצרים עם הדגמה שבועית, כך שאתה רואה התקדמות אמיתית כל הזמן.",
+    q: "כמה זמן לוקח לבנות אתר?",
+    a: "תלוי בהיקף הפרויקט. אתר עסק בסיסי לוקח בין 2 ל-5 ימי עבודה. אתר עם פאנל ניהול ופונקציות מתקדמות לוקח 5 עד 14 ימים. אנחנו נסכם לוח זמנים מדויק לפני שמתחילים.",
   },
   {
-    q: "מה התקציב הטיפוסי?",
-    a: "כל פרויקט מתומחר אישית לפי היקף. אוטומציה ממוקדת מתחילה ב-3-5K, MVP מלא בטווח של 15-50K, ופלטפורמה מורכבת מעבר לכך. אני שקוף לחלוטין על מחיר ומה כלול בו.",
+    q: "האם תהיה לי שליטה לעדכן את האתר אחרי שתסיימו?",
+    a: "כן. בכל הפרויקטים אני בונה פאנל ניהול עצמאי שמאפשר לכם לעדכן תוכן, מחירים, תמונות ומה שצריך, בלי לתת לי שורה אחת של קוד. בלי תלות, בלי תשלומים חודשיים.",
   },
   {
-    q: "מה קורה אחרי שהמוצר עולה לאוויר?",
-    a: "אני נשאר זמין לתחזוקה, באגים ושיפורים. אפשר להיכנס לרטיינר חודשי או לעבוד לפי שעה. אני לא מאמין ב-'בניתי ונעלמתי' — המוצר חי גם אחרי המסירה.",
+    q: "כמה זה עולה?",
+    a: "המחיר משתנה לפי הפרויקט והדרישות הספציפיות. אני נותן הצעת מחיר מסודרת אחרי שיחת היכרות קצרה שבה אני מבין מה אתם צריכים. השיחה עצמה ללא עלות וללא התחייבות.",
   },
   {
-    q: "איך אתה משתמש ב-AI בתהליך?",
-    a: "AI הוא כלי, לא מטרה. אני משתמש בו איפה שהוא באמת מוסיף ערך — קטגוריזציה, חיפוש סמנטי, יצירת תוכן, סוכנים אוטונומיים. לא דוחף LLM לכל דבר רק כי זה טרנדי.",
+    q: "האם אתה לוקח גם פרויקטים קטנים?",
+    a: "כן. אני עובד עם עסקים קטנים בישראל וחלק מהלקוחות שלי הם בעלי עסקים שמתחילים. אם הפרויקט מתאים לי ואני מאמין שאני יכול לעזור, אני אקח אותו.",
   },
   {
-    q: "אתה עובד עם צוות קיים או לבד?",
-    a: "שניהם. אני עובד מצוין כ-Solo Builder על פרויקטים מקצה לקצה, אבל גם משתלב בצוות קיים כ-Tech Lead, יועץ ארכיטקטורה או CTO זמני.",
-  },
-  {
-    q: "איפה הקוד נשמר?",
-    a: "הכל ב-GitHub פרטי שאתה הבעלים שלו מהיום הראשון. תיעוד מלא, deploy אוטומטי, ובלי vendor lock-in. אתה תמיד יכול להמשיך עם כל מפתח אחר.",
+    q: "מה ההבדל בינך לבין סוכנות גדולה?",
+    a: "סוכנות גדולה תיתן לכם תהליך מסודר אבל אתם תהיו לקוח מספר 47. אצלי, אתם הלקוח. כל החלטה עוברת דרכי, כל שורת קוד נכתבת על ידי, וכל שיחה היא איתי. זה אישי יותר. זה גמיש יותר. וזה לרוב גם נוח יותר במחיר.",
   },
 ];
 
 export default function FAQ() {
+  const [open, setOpen] = useState<number | null>(0);
+
   return (
-    <section id="faq" className="relative py-32">
+    <section id="faq" className="relative py-24 md:py-32 bg-white">
       <div className="container-narrow max-w-3xl">
-        <div className="text-center mb-16">
-          <div className="mono text-xs text-primary mb-4">// 06 — FAQ</div>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
-            <span className="text-foreground">שאלות </span>
-            <span className="text-gradient-brand">נפוצות.</span>
+        <div className="text-center mb-12">
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-[1.1] text-foreground">
+            שאלות נפוצות
           </h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-3">
-          {faqs.map((f, i) => (
-            <AccordionItem
-              key={f.q}
-              value={`item-${i}`}
-              className="rounded-2xl border border-border bg-card px-6 hover:border-primary/40 transition-colors data-[state=open]:border-primary/40 data-[state=open]:shadow-glow"
-            >
-              <AccordionTrigger className="text-right hover:no-underline py-5 font-display font-semibold text-base lg:text-lg">
-                {f.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-5 text-[15px]">
-                {f.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div className="space-y-3">
+          {faqs.map((f, i) => {
+            const isOpen = open === i;
+            return (
+              <div
+                key={i}
+                className="rounded-2xl bg-white border border-black/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden transition-all"
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  className="w-full flex items-center justify-between gap-4 px-6 md:px-7 py-5 text-right"
+                >
+                  <span className="font-display font-bold text-base md:text-lg text-foreground leading-snug">
+                    {f.q}
+                  </span>
+                  <span
+                    className={`shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#0066ff]/8 text-[#0066ff] transition-transform duration-300 ${
+                      isOpen ? "rotate-45" : "rotate-0"
+                    }`}
+                  >
+                    <Plus className="h-4 w-4" />
+                  </span>
+                </button>
+                <div
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 md:px-7 pb-6 text-muted-foreground text-[15px] leading-relaxed">
+                      {f.a}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

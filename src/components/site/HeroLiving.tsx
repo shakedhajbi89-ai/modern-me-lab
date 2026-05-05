@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 /**
  * Hero — premium animated logo "Shaked | AI Studio"
@@ -14,13 +14,20 @@ export default function HeroLiving() {
           "linear-gradient(180deg, #f8f8f8 0%, #e0e0e0 35%, #888 60%, #2a2a2a 90%, #1a1a1a 100%)",
       }}
     >
-      {/* soft fade into next light section */}
-      <div className="pointer-events-none absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-transparent to-white" />
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
 
       {/* === LOGO STAGE (centerpiece) === */}
-      <div className="relative flex-1 flex items-center justify-center px-6">
+      <div className="relative flex-1 flex items-center justify-center px-6 pt-24">
         <div
-          className="relative studio-stage select-none"
+          className="relative studio-stage select-none w-full max-w-[1100px]"
           dir="ltr"
           aria-label="Shaked AI Studio"
         >
@@ -96,25 +103,50 @@ export default function HeroLiving() {
         />
       </div>
 
-      {/* === Bottom line — tagline + CTA === */}
-      <div className="relative pb-16 md:pb-20 px-6 text-center">
+      {/* === Bottom: tagline + CTAs === */}
+      <div className="relative pb-20 px-6 text-center">
         <p
-          className="text-white/85 mb-6 text-base md:text-lg font-medium"
+          className="text-white/85 mb-7 text-sm md:text-base font-medium"
           style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
+          dir="rtl"
         >
           בונה דיגיטלי בעידן ה־<span className="text-[#4d8eff] font-bold">AI</span>
         </p>
-        <a
-          href="#contact"
-          className="group inline-flex items-center gap-2 rounded-xl bg-[#0066ff] hover:bg-[#4d8eff] text-white px-7 py-3.5 text-base font-semibold transition-all hover:scale-[1.03] shadow-[0_8px_30px_rgba(0,102,255,0.45)]"
-        >
-          <span>בוא נדבר על הפרויקט שלך</span>
-          <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-        </a>
-        <div className="mt-10 mono text-[10px] uppercase tracking-[0.3em] text-white/50">
-          scroll ↓
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center rounded-xl bg-[#0066ff] hover:bg-[#4d8eff] text-white px-7 py-3.5 text-sm md:text-base font-semibold transition-all hover:scale-[1.03] shadow-[0_8px_30px_rgba(0,102,255,0.45)]"
+            style={{ animation: "hero-pulse 3.2s ease-in-out infinite" }}
+          >
+            בואו נדבר על הפרויקט שלכם
+          </a>
+          <a
+            href="#services"
+            className="inline-flex items-center justify-center rounded-xl border border-white/30 hover:bg-white/10 text-white px-7 py-3.5 text-sm md:text-base font-semibold transition-all backdrop-blur-sm"
+          >
+            ראו מה אני בונה
+          </a>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="mt-12 flex justify-center">
+          <ChevronDown
+            className="h-5 w-5 text-white/50"
+            style={{ animation: "scroll-bounce 2.4s ease-in-out infinite" }}
+          />
         </div>
       </div>
+
+      <style>{`
+        @keyframes hero-pulse {
+          0%, 100% { box-shadow: 0 8px 30px rgba(0,102,255,0.40); }
+          50% { box-shadow: 0 8px 40px rgba(0,102,255,0.65); }
+        }
+        @keyframes scroll-bounce {
+          0%, 100% { transform: translateY(0); opacity: 0.4; }
+          50% { transform: translateY(6px); opacity: 0.9; }
+        }
+      `}</style>
     </section>
   );
 }
