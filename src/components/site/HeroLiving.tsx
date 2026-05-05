@@ -6,7 +6,6 @@ export default function HeroLiving() {
     <section
       id="top"
       className="relative overflow-hidden min-h-screen flex flex-col"
-      style={{ background: "#1a1a1a" }}
     >
       {/* Animated logo fills the stage */}
       <div className="relative flex-1 min-h-[600px]">
@@ -14,13 +13,12 @@ export default function HeroLiving() {
       </div>
 
       {/* Bottom: tagline + CTAs */}
-      <div className="relative pb-20 px-6 text-center bg-[#1a1a1a]">
+      <div className="relative pb-20 px-6 text-center">
         <p
-          className="text-white/85 mb-7 text-sm md:text-base font-medium"
-          style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
+          className="text-foreground/85 mb-7 text-sm md:text-base font-medium"
           dir="rtl"
         >
-          בונה דיגיטלי בעידן ה־<span className="text-[#4d8eff] font-bold">AI</span>
+          בונה דיגיטלי בעידן ה־<span className="text-[#0066ff] font-bold">AI</span>
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a

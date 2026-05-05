@@ -137,7 +137,7 @@ export default function AnimatedLogo() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: linear-gradient(180deg, #f8f8f8 0%, #e0e0e0 35%, #888 60%, #2a2a2a 90%, #1a1a1a 100%);
+          background: transparent;
           position: relative;
           overflow: hidden;
         }
@@ -147,9 +147,9 @@ export default function AnimatedLogo() {
           left: 50%;
           width: 8px;
           height: clamp(70px, 10vw, 130px);
-          background: linear-gradient(180deg, #0066ff 0%, #4d8eff 50%, #0066ff 100%);
+          background: linear-gradient(180deg, #1a1a1a 0%, #404040 50%, #1a1a1a 100%);
           border-radius: 4px;
-          box-shadow: 0 0 40px rgba(0, 102, 255, 0.7);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
           opacity: 0;
           z-index: 10;
           transform: translate(-50%, -50%) scaleY(0);
