@@ -415,9 +415,7 @@
 
   font-family: 'Inter', 'Heebo', system-ui, sans-serif;
   color: hsl(var(--foreground));
-  background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 15%, #ffffff 60%, #f0f0f0 75%, #2a2a2a 92%, #1a1a1a 100%);
-  background-attachment: fixed;
-  background-image: linear-gradient(180deg, #f8f8f8 0%, #ffffff 15%, #ffffff 60%, #f0f0f0 75%, #2a2a2a 92%, #1a1a1a 100%);
+  background: transparent;
   min-height: 100vh;
 }
 .theme-living h1, .theme-living h2, .theme-living h3,
