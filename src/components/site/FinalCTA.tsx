@@ -47,20 +47,18 @@ export default function FinalCTA() {
           <a
             href="https://wa.me/972528360660"
             target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
-            dir="ltr"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-[#0066ff] transition-colors"
           >
-            <MessageCircle className="h-4 w-4 text-[#0066ff]" />
-            052-8360660
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp
           </a>
           <a
-            href="mailto:Shakedhajbi89@gmail.com"
-            className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
-            dir="ltr"
+            href="mailto:Shakedhajbi89@gmail.com?subject=פנייה דרך האתר"
+            className="inline-flex items-center gap-2 hover:text-[#0066ff] transition-colors"
           >
-            <Mail className="h-4 w-4 text-[#0066ff]" />
-            Shakedhajbi89@gmail.com
+            <Mail className="h-4 w-4" />
+            Shaked AI Studio
           </a>
         </div>
 
