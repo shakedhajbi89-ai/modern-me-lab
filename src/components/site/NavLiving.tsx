@@ -20,8 +20,8 @@ function BrandMark() {
           width: "3px",
           height: "20px",
           borderRadius: "999px",
-          background: "linear-gradient(180deg, #0066ff, #4d8eff, #0066ff)",
-          boxShadow: "0 0 8px rgba(0,102,255,0.5)",
+          background: "linear-gradient(180deg, #1a1a1a, #404040, #1a1a1a)",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
         }}
       />
       <span className="font-display text-base tracking-tight">
