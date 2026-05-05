@@ -12,8 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Heebo", "Space Grotesk", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "Heebo", "system-ui", "sans-serif"],
+        sans: ["Inter", "Heebo", "system-ui", "sans-serif"],
+        display: ["Inter", "Heebo", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
       colors: {

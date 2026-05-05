@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -16,69 +16,68 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-32">
+    <section id="contact" className="relative py-24 md:py-32 bg-white">
       <div className="container-narrow">
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Form */}
-          <div className="rounded-3xl border border-border bg-card p-8 md:p-10 glow-border relative">
-            <div className="mono text-xs text-primary mb-3">// 05 — get in touch</div>
-            <h3 className="font-display font-bold text-3xl mb-2">
-              <span className="text-foreground">אספר לך מה</span>{" "}
-              <span className="text-gradient-brand">אפשר לבנות.</span>
-            </h3>
-            <p className="text-muted-foreground text-sm mb-8">
-              ספר לי קצת על הפרויקט — ואחזור אליך בתוך 24 שעות.
-            </p>
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 mono text-[11px] uppercase tracking-[0.25em] text-[#0066ff] mb-5">
+            <span className="h-px w-8 bg-[#0066ff]" />
+            <span>צור קשר</span>
+          </div>
+          <h2 className="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-[1.1] text-foreground">
+            בוא נדבר על הפרויקט שלך
+          </h2>
+          <p className="mt-4 text-muted-foreground text-base md:text-lg">
+            שיחת היכרות חינם · תגובה תוך 24 שעות
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-black/[0.06] bg-white p-7 md:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
             <form onSubmit={onSubmit} className="space-y-4">
               <Input name="name" label="שם" placeholder="השם שלך" required />
               <Input name="email" type="email" label="אימייל" placeholder="you@example.com" required />
+              <Input name="phone" type="tel" label="טלפון (אופציונלי)" placeholder="050-0000000" />
               <div>
-                <label className="mono text-[11px] text-muted-foreground mb-2 block">על מה תרצה לדבר</label>
+                <label className="text-[12px] font-semibold text-foreground/70 mb-2 block">ספר על הפרויקט</label>
                 <textarea
                   name="message"
                   rows={5}
-                  placeholder="פרויקט / רעיון / שאלה..."
+                  placeholder="סוג העסק, מה אתה צריך, תקציב משוער..."
                   required
-                  className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                  className="w-full rounded-xl bg-[#f8f8f8] border border-black/[0.06] px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-[#0066ff] focus:ring-2 focus:ring-[#0066ff]/20 transition-all resize-none"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-brand py-3.5 text-sm font-medium text-primary-foreground shadow-glow transition-all hover:scale-[1.01] hover:shadow-[0_0_60px_hsl(var(--primary)/0.5)] disabled:opacity-60"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#0066ff] hover:bg-[#4d8eff] py-3.5 text-sm font-semibold text-white shadow-[0_8px_30px_rgba(0,102,255,0.3)] transition-all hover:scale-[1.01] disabled:opacity-60"
               >
                 {loading ? "שולח..." : "שלח הודעה"}
               </button>
             </form>
           </div>
 
-          {/* Info */}
           <div className="space-y-4">
-            <div className="rounded-3xl border border-border bg-card p-8 glow-border relative">
-              <div className="mono text-xs text-primary mb-3">// 06 — info</div>
-              <h3 className="font-display font-bold text-3xl mb-6">
-                <span className="text-foreground">פרטים</span>{" "}
-                <span className="text-gradient-brand">שכדאי לדעת.</span>
-              </h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
+            <div className="rounded-2xl border border-black/[0.06] bg-[#f8f8f8] p-7 md:p-8">
+              <h3 className="font-display font-bold text-2xl mb-4 text-foreground">למה לבחור בי</h3>
+              <ul className="space-y-3 text-[15px] text-muted-foreground leading-relaxed">
                 <li className="flex items-start gap-3">
-                  <span className="text-primary mt-0.5">→</span>
-                  <span><strong className="text-foreground">AI Engineer · Full-Stack Developer</strong> מבסיס. בונה אוטומציות, סוכנים וכלים מותאמים.</span>
+                  <span className="text-[#0066ff] mt-1 font-bold">→</span>
+                  <span><strong className="text-foreground">סטודיו אישי</strong> — אתה מדבר ישירות איתי, בלי תיווך.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-primary mt-0.5">→</span>
-                  <span><strong className="text-foreground">תגובה תוך 24 שעות.</strong> שיחת היכרות חינם · אפיון ראשוני ללא התחייבות.</span>
+                  <span className="text-[#0066ff] mt-1 font-bold">→</span>
+                  <span><strong className="text-foreground">מומחה AI</strong> — משלב טכנולוגיות חדישות בכל פתרון.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-primary mt-0.5">→</span>
-                  <span>עובד מ<strong className="text-foreground">חיפה</strong> · משלוח בכל העולם · GMT+3</span>
+                  <span className="text-[#0066ff] mt-1 font-bold">→</span>
+                  <span><strong className="text-foreground">מחירים שקופים</strong> — הצעת מחיר מסודרת בפגישה, בלי הפתעות.</span>
                 </li>
               </ul>
             </div>
 
             <ContactCard icon={Mail} label="EMAIL" value="hajbishaked.96@gmail.com" href="mailto:hajbishaked.96@gmail.com" />
-            <ContactCard icon={Linkedin} label="LINKEDIN" value="לינקדאין" href="#" />
-            <ContactCard icon={Github} label="GITHUB" value="shaked@github" href="#" />
+            <ContactCard icon={MapPin} label="LOCATION" value="חיפה · עובד עם כל הארץ" href="#" />
           </div>
         </div>
       </div>
@@ -89,10 +88,10 @@ export default function Contact() {
 function Input({ label, ...props }: { label: string } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div>
-      <label className="mono text-[11px] text-muted-foreground mb-2 block">{label}</label>
+      <label className="text-[12px] font-semibold text-foreground/70 mb-2 block">{label}</label>
       <input
         {...props}
-        className="w-full rounded-xl bg-background/60 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 transition-all"
+        className="w-full rounded-xl bg-[#f8f8f8] border border-black/[0.06] px-4 py-3 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:border-[#0066ff] focus:ring-2 focus:ring-[#0066ff]/20 transition-all"
       />
     </div>
   );
@@ -102,14 +101,14 @@ function ContactCard({ icon: Icon, label, value, href }: { icon: any; label: str
   return (
     <a
       href={href}
-      className="group flex items-center gap-4 rounded-2xl border border-border bg-card px-6 py-4 transition-all hover:border-primary/40 hover:-translate-y-0.5"
+      className="group flex items-center gap-4 rounded-2xl border border-black/[0.06] bg-white px-6 py-4 transition-all hover:border-[#0066ff]/30 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
     >
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-brand/10 border border-primary/30 text-primary group-hover:scale-110 transition-transform">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0066ff]/10 text-[#0066ff] group-hover:bg-[#0066ff] group-hover:text-white transition-colors">
         <Icon className="h-4 w-4" />
       </div>
       <div className="flex-1 min-w-0">
-        <div className="mono text-[10px] text-muted-foreground">{label}</div>
-        <div className="text-sm text-foreground truncate">{value}</div>
+        <div className="mono text-[10px] uppercase tracking-wider text-muted-foreground">{label}</div>
+        <div className="text-sm text-foreground truncate font-medium">{value}</div>
       </div>
     </a>
   );

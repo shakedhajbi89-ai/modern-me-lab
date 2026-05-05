@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Heebo:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;700;900&family=Archivo+Black&family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -371,71 +371,65 @@
 }
 
 /* ============================================
-   VARIANT 1 — LIVING SYSTEM × QUIET INTELLIGENCE
-   Calm cream base, mineral green signature, amber accents.
+   STUDIO — Black + Electric Blue
 ============================================ */
 .theme-living {
-  --background: 36 35% 92%;             /* warm cream #F0EAE0 */
-  --foreground: 220 16% 13%;            /* slate ink #1C1F26 */
-  --card: 36 40% 96%;                   /* lighter paper */
-  --card-foreground: 220 16% 13%;
-  --popover: 36 40% 96%;
-  --popover-foreground: 220 16% 13%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
 
-  /* Signature mineral green */
-  --primary: 162 22% 45%;               /* mineral green #5C8A7A */
-  --primary-foreground: 36 40% 96%;
+  --primary: 0 0% 10%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Amber — only for live/glow moments */
-  --accent: 42 50% 60%;                 /* warm amber #C9A961 */
-  --accent-foreground: 220 16% 13%;
+  --accent: 217 100% 50%;
+  --accent-foreground: 0 0% 100%;
 
-  --secondary: 36 25% 87%;
-  --secondary-foreground: 220 16% 13%;
-  --muted: 36 22% 89%;
-  --muted-foreground: 220 10% 38%;
+  --secondary: 0 0% 97%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 0 0% 97%;
+  --muted-foreground: 0 0% 40%;
 
-  --destructive: 8 55% 50%;
-  --destructive-foreground: 36 40% 96%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
 
-  --border: 36 18% 82%;
-  --input: 36 18% 82%;
-  --ring: 162 22% 45%;
+  --border: 0 0% 92%;
+  --input: 0 0% 92%;
+  --ring: 217 100% 50%;
 
-  --grid-line: 36 18% 84%;
-  --surface-elevated: 36 40% 96%;
-  --glow: 162 22% 45%;
+  --grid-line: 0 0% 94%;
+  --surface-elevated: 0 0% 100%;
+  --glow: 217 100% 50%;
 
-  --gradient-hero:
-    radial-gradient(ellipse 70% 60% at 20% 10%, hsl(162 22% 45% / 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 85% 90%, hsl(42 50% 60% / 0.18), transparent 60%);
-  --gradient-brand: linear-gradient(135deg, hsl(162 22% 40%), hsl(162 28% 55%));
-  --gradient-text: linear-gradient(135deg, hsl(220 16% 13%) 0%, hsl(162 22% 38%) 100%);
-  --gradient-card: linear-gradient(180deg, hsl(36 40% 96%) 0%, hsl(36 35% 92%) 100%);
-  --gradient-border: linear-gradient(135deg, hsl(162 22% 45% / 0.5), hsl(42 50% 60% / 0.4));
+  --gradient-hero: linear-gradient(180deg, #f8f8f8 0%, #e0e0e0 35%, #888 60%, #2a2a2a 90%, #1a1a1a 100%);
+  --gradient-brand: linear-gradient(135deg, hsl(217 100% 50%), hsl(217 100% 65%));
+  --gradient-text: linear-gradient(135deg, hsl(0 0% 10%) 0%, hsl(217 100% 45%) 100%);
+  --gradient-card: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+  --gradient-border: linear-gradient(135deg, hsl(217 100% 50% / 0.5), hsl(217 100% 65% / 0.3));
 
-  --shadow-glow: 0 0 50px hsl(162 22% 45% / 0.18), 0 0 100px hsl(42 50% 60% / 0.10);
-  --shadow-card: 0 1px 0 hsl(220 16% 13% / 0.04), 0 30px 60px -32px hsl(220 16% 13% / 0.18);
-  --shadow-soft: 0 4px 24px hsl(220 16% 13% / 0.08);
+  --shadow-glow: 0 0 50px hsl(217 100% 50% / 0.30), 0 0 100px hsl(217 100% 50% / 0.12);
+  --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.06);
+  --shadow-soft: 0 4px 24px hsl(0 0% 0% / 0.05);
 
-  font-family: 'Inter Tight', 'Heebo', system-ui, sans-serif;
+  font-family: 'Inter', 'Heebo', system-ui, sans-serif;
   background: hsl(var(--background));
   color: hsl(var(--foreground));
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, hsl(162 22% 45% / 0.10), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 90% 110%, hsl(42 50% 60% / 0.08), transparent 60%);
-  background-attachment: fixed;
+  background-image: none;
+  background-attachment: initial;
 }
 .theme-living h1, .theme-living h2, .theme-living h3,
 .theme-living .font-display {
-  font-family: 'Fraunces', 'DM Serif Display', Georgia, serif;
+  font-family: 'Inter', 'Heebo', system-ui, sans-serif;
   letter-spacing: -0.025em;
-  font-weight: 500;
+  font-weight: 800;
 }
 .theme-living .font-italic-serif {
-  font-family: 'Fraunces', 'Instrument Serif', Georgia, serif;
+  font-family: 'Inter', 'Heebo', system-ui, sans-serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
+  color: hsl(217 100% 50%);
 }
 .theme-living .text-gradient-brand {
   background: var(--gradient-brand);
@@ -452,17 +446,19 @@
           mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
 }
 .theme-living .glass {
-  background: hsl(36 40% 96% / 0.7);
+  background: hsl(0 0% 100% / 0.75);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border: 1px solid hsl(var(--border));
 }
 .theme-living .paper-grain {
-  background-image: radial-gradient(hsl(220 16% 13% / 0.035) 1px, transparent 1px);
+  background-image: radial-gradient(hsl(0 0% 0% / 0.025) 1px, transparent 1px);
   background-size: 4px 4px;
 }
+.theme-living .surface-soft { background: #f8f8f8; }
+.theme-living .surface-dark { background: linear-gradient(180deg, #1a1a1a, #0a0a0a); color: #fff; }
 
-/* Organic breathing blobs — slow, calm */
+/* Decorative blobs (kept for compat, neutral) */
 @keyframes breathe {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(2%, -1.5%) scale(1.05); }
@@ -476,10 +472,56 @@
 .animate-breathe-slow { animation: breathe-2 26s ease-in-out infinite; }
 
 @keyframes amber-pulse {
-  0%, 100% { opacity: 0.6; box-shadow: 0 0 0 0 hsl(42 70% 60% / 0.4); }
-  50% { opacity: 1; box-shadow: 0 0 0 8px hsl(42 70% 60% / 0); }
+  0%, 100% { opacity: 0.7; box-shadow: 0 0 0 0 hsl(217 100% 50% / 0.5); }
+  50% { opacity: 1; box-shadow: 0 0 0 8px hsl(217 100% 50% / 0); }
 }
-  .animate-amber-pulse { animation: amber-pulse 2.4s ease-in-out infinite; }
+.animate-amber-pulse { animation: amber-pulse 2.4s ease-in-out infinite; }
+
+/* ============================================
+   STUDIO LOGO — 8s cinematic loop
+============================================ */
+@keyframes studio-divider {
+  0%, 2.5%   { transform: scaleY(0); }
+  16.25%     { transform: scaleY(1); }
+  73.75%     { transform: scaleY(1); }
+  87.5%, 100%{ transform: scaleY(0); }
+}
+@keyframes studio-shaked {
+  0%, 16.25% { transform: translateX(0); }
+  30%        { transform: translateX(calc(-100% - 1.5rem)); }
+  60%        { transform: translateX(calc(-100% - 1.5rem)); }
+  73.75%     { transform: translateX(0); }
+  100%       { transform: translateX(0); }
+}
+@keyframes studio-aistudio {
+  0%, 16.25% { transform: translateX(0); }
+  30%        { transform: translateX(calc(100% + 1.5rem)); }
+  60%        { transform: translateX(calc(100% + 1.5rem)); }
+  73.75%     { transform: translateX(0); }
+  100%       { transform: translateX(0); }
+}
+@keyframes studio-heartbeat {
+  0%, 37.5%  { transform: scale(1); }
+  43.75%     { transform: scale(1.04); }
+  47.5%, 100%{ transform: scale(1); }
+}
+@keyframes studio-glow {
+  0%, 35%, 52%, 100% { opacity: 0; }
+  43.75%             { opacity: 1; }
+}
+@keyframes studio-shimmer {
+  0%, 36.25% { transform: translateX(-120%) skewX(-18deg); opacity: 0; }
+  37%        { opacity: 0.45; }
+  55%        { transform: translateX(120%) skewX(-18deg); opacity: 0.45; }
+  56%, 100%  { opacity: 0; }
+}
+.studio-divider  { transform-origin: center; animation: studio-divider 8s cubic-bezier(0.33,1,0.68,1) infinite; }
+.studio-shaked   { animation: studio-shaked 8s cubic-bezier(0.25,1,0.5,1) infinite; }
+.studio-aistudio { animation: studio-aistudio 8s cubic-bezier(0.25,1,0.5,1) infinite; }
+.studio-stage    { animation: studio-heartbeat 8s ease-in-out infinite; }
+.studio-glow     { animation: studio-glow 8s ease-in-out infinite; }
+.studio-shimmer  { animation: studio-shimmer 8s ease-in-out infinite; }
+
 
 /* ============================================
    ACCESSIBILITY OVERRIDES (toggled via FloatingDock)
@@ -499,14 +541,15 @@ html.a11y-underline a {
 }
 
 html.a11y-contrast.theme-living {
-  --background: 36 40% 98%;
-  --foreground: 220 30% 4%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
   --card: 0 0% 100%;
-  --card-foreground: 220 30% 4%;
-  --muted-foreground: 220 20% 22%;
-  --primary: 162 40% 28%;
+  --card-foreground: 0 0% 0%;
+  --muted-foreground: 0 0% 15%;
+  --primary: 0 0% 0%;
   --primary-foreground: 0 0% 100%;
-  --border: 220 30% 20%;
+  --accent: 217 100% 38%;
+  --border: 0 0% 20%;
 }
 html.a11y-contrast {
   --muted-foreground: 0 0% 15%;
