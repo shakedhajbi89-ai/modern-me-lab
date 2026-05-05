@@ -131,7 +131,7 @@ export default function AnimatedLogo() {
       <div ref={shimmerRef} className="shimmer" />
       <style>{`
         .logo-stage {
-          --logo-center: 43%;
+          --logo-center: 40%;
           width: 100%;
           max-width: 100vw;
           height: 100%;
@@ -219,14 +219,14 @@ export default function AnimatedLogo() {
         }
         .text-right .ai {
           font-weight: 900;
-          font-size: clamp(36px, 12vw, 100px);
+          font-size: clamp(30px, 9.5vw, 100px);
           color: #0066ff;
           text-shadow: 0 0 40px rgba(0, 102, 255, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
           line-height: 1;
         }
         .text-right .studio {
           font-weight: 800;
-          font-size: clamp(36px, 12vw, 100px);
+          font-size: clamp(30px, 9.5vw, 100px);
           color: #1a1a1a;
           line-height: 1;
           text-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
