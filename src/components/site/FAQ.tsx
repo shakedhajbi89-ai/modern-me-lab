@@ -28,7 +28,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-24 md:py-32 bg-white">
+    <section id="faq" className="relative py-24 md:py-32">
       <div className="container-narrow max-w-3xl">
         <div className="text-center mb-12">
           <h2 className="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-[1.1] text-foreground">

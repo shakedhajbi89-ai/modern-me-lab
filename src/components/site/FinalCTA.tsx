@@ -5,9 +5,6 @@ export default function FinalCTA() {
     <section
       id="contact"
       className="relative py-24 md:py-32 overflow-hidden text-white"
-      style={{
-        background: "linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%)",
-      }}
     >
       {/* subtle grid overlay */}
       <div

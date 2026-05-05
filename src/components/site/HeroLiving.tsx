@@ -38,7 +38,7 @@ export default function HeroLiving() {
 
         <div className="mt-12 flex justify-center">
           <ChevronDown
-            className="h-5 w-5 text-white/50"
+            className="h-5 w-5 text-foreground/40"
             style={{ animation: "scroll-bounce 2.4s ease-in-out infinite" }}
           />
         </div>

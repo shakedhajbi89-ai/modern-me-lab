@@ -1,6 +1,6 @@
 export default function StudioNote() {
   return (
-    <section id="studio" className="relative py-24 md:py-32 surface-soft border-t border-[#0066ff]">
+    <section id="studio" className="relative py-24 md:py-32 border-t border-[#0066ff]/30">
       <div className="container-narrow max-w-3xl">
         <h2 className="font-display font-bold text-3xl md:text-4xl tracking-tight text-foreground mb-8">
           הסטודיו
