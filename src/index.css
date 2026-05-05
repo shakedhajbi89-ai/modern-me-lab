@@ -418,6 +418,14 @@
   background: transparent;
   min-height: 100vh;
 }
+.theme-living {
+  /* Promote scroll-fixed background layer to its own GPU layer to avoid scroll jank */
+}
+.theme-living > [aria-hidden].fixed {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
 .theme-living h1, .theme-living h2, .theme-living h3,
 .theme-living .font-display {
   font-family: 'Inter', 'Heebo', system-ui, sans-serif;
